@@ -1,0 +1,203 @@
+<!-- ABOUT
+    ================================================== -->
+<section class="pt-8 pt-md-11 bg-gradient-light">
+  <div class="container">
+
+    <!-- row-1 -->
+    <div class="row align-items-center justify-content-between mb-8 mb-md-11">
+      <div class="col-12 col-md-6 order-md-2" data-aos="fade-left">
+        <!-- Heading -->
+        <h2>
+          {{site.data.about.row-1.title}}
+        </h2>
+
+        <!-- Text -->
+        <p class="font-size-lg text-muted mb-6">
+          {{site.data.about.row-1.text}}
+        </p>
+
+        <!-- List -->
+            <div class="row">
+              <div class="col-12 col-lg-6">
+            
+                <!-- Item -->
+                <div class="d-flex">
+            
+                  <!-- Check -->
+                  <div class="badge badge-rounded-circle badge-success-soft mt-1 mr-4">
+                    <i class="fe fe-check"></i>
+                  </div>
+            
+                  <!-- Text -->
+                  <p class="text-success">
+                    Lifetime updates
+                  </p>
+            
+                </div>
+            
+                <!-- Item -->
+                <div class="d-flex">
+            
+                  <!-- Check -->
+                  <div class="badge badge-rounded-circle badge-success-soft mt-1 mr-4">
+                    <i class="fe fe-check"></i>
+                  </div>
+            
+                  <p class="text-success mb-lg-0">
+                    Tons of assets
+                  </p>
+            
+                </div>
+            
+              </div>
+              <div class="col-12 col-lg-6 mb-6 mb-md-0">
+            
+                <!-- Item -->
+                <div class="d-flex">
+            
+                  <!-- Check -->
+                  <span class="badge badge-rounded-circle badge-success-soft mt-1 mr-4">
+                    <i class="fe fe-check"></i>
+                  </span>
+            
+                  <!-- Text -->
+                  <p class="text-success">
+                    Tech support
+                  </p>
+            
+                </div>
+            
+                <!-- Item -->
+                <div class="d-flex">
+            
+                  <!-- Check -->
+                  <div class="badge badge-rounded-circle badge-success-soft mr-1 mr-4">
+                    <i class="fe fe-check"></i>
+                  </div>
+            
+                  <!-- Text -->
+                  <p class="text-success mb-0">
+                    Integration ready
+                  </p>
+            
+                </div>
+            
+              </div>
+            </div> <!-- / .row -->
+
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-5 order-md-1" data-aos="fade-right">
+
+        <!-- Card -->
+        <div class="card shadow-light-lg lift lift-lg">
+          {%- assign card = site.data.about.row-1.card -%}
+          <!-- Image -->
+          <img src="{{card.image}}" alt="card" class="card-img-top">
+
+          <!-- Shape -->
+          <div class="position-relative">
+            <div class="shape shape-bottom shape-fluid-x svg-shim text-white">
+              <object type="image/svg+xml" data="{{card.shape}}" class="text-gray-600">
+                Your browser does not support SVG
+              </object>
+            </div>
+          </div>
+
+          <!-- Body -->
+          <div class="card-body">
+
+            <!-- Form -->
+            <form>
+              <div class="form-label-group">
+                <input type="text" class="form-control form-control-flush" id="cardName" placeholder="Name">
+                <label for="cardName">Name</label>
+              </div>
+              <div class="form-label-group">
+                <input type="email" class="form-control form-control-flush" id="cardEmail" placeholder="Email">
+                <label for="cardEmail">Email</label>
+              </div>
+              <div class="form-label-group">
+                <input type="password" class="form-control form-control-flush" id="cardPassword" placeholder="Password">
+                <label for="cardPassword">Password</label>
+              </div>
+              <div class="mt-6">
+                <button class="btn btn-block btn-success lift" type="submit">
+                  Download a sample
+                </button>
+              </div>
+            </form>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div> <!-- / .row -->
+
+    <!-- row-2 -->
+    <div class="row align-items-center">
+      <div class="col-12 col-md-7 col-lg-6" data-aos="fade-right">
+        <!-- Heading -->
+        <h2>
+          {{site.data.about.row-2.title}}
+        </h2>
+
+        <!-- Text -->
+        <p class="font-size-lg text-muted mb-6">
+          {{site.data.about.row-2.text}}
+        </p>
+        {%- assign row = site.data.about.row-2.row -%}
+        <!-- List -->
+        {%- assign list = row.col-1 -%}
+        {%- for item in list -%}
+        <div class="d-flex">
+          <!-- Icon -->
+          <div class="icon text-primary">
+            <object type="image/svg+xml" data="{{item.icon}}" class="text-gray-600">
+              Your browser does not support SVG
+            </object>
+          </div>
+
+          <div class="ml-5">
+
+            <!-- Heading -->
+            <h4 class="mb-1">
+              {{item.title}}
+            </h4>
+
+            <!-- Text -->
+            <p class="text-muted mb-6">
+              {{item.text}}
+            </p>
+
+          </div>
+
+        </div>
+        {%- endfor -%}
+      </div>
+
+      <div class="col-12 col-md-5 col-lg-6">
+
+        <div class="w-md-150 w-lg-130 position-relative" data-aos="fade-left">
+
+          <!-- Shape -->
+          <div class="shape shape-fluid-y shape-blur-4 svg-shim text-gray-200">
+            <object type="image/svg+xml" data="{{row.col-2.shape}}" class="text-gray-600">
+              Your browser does not support SVG
+            </object>
+          </div>
+
+          <!-- Image -->
+          <div class="img-skewed img-skewed-left">
+
+            <img src="{{row.col-2.image}}" class="screenshot img-fluid img-skewed-item" alt="image">
+
+          </div>
+
+        </div>
+
+      </div>
+    </div> <!-- / .row -->
+  </div> <!-- / .container -->
+</section>
