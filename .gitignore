@@ -5,3 +5,4 @@ gemfile.lock
 .jekyll-cache
 .jekyll-metadata
 vendor
+_src/docs

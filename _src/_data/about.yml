@@ -6,12 +6,12 @@ row-1:
 
   text: Using Landkit to build your site means never worrying about designing another page or cross browser compatibility. Our ever-growing library of components and pre-designed layouts will make your life easier.
   row:
-  - col:
-    - text: Lifetime updates
-    - text: Tons of assets
-  - col:
-    - text: Tech support
-    - text: Integration ready
+    - col:
+        - text: Lifetime updates
+        - text: Tons of assets
+    - col:
+        - text: Tech support
+        - text: Integration ready
   card:
     image: assets/img/photos/photo-2.jpg
     shape: assets/img/shapes/curves/curve-1.svg
@@ -23,13 +23,13 @@ row-2:
 
   text: We've built well over a dozen Bootstrap themes and sold tens of thousands of copies.
   row:
-    col-1:
-    - icon: assets/img/icons/duotone-icons/Media/Repeat.svg
-      title: Bootstrap users since the beginning
-      text: We've been developing with Bootstrap since it was publicly released in 2011.
-    - icon: assets/img/icons/duotone-icons/Code/Code.svg
-      title: Deep understanding of Bootstrap
-      text: We've watched Bootstrap grow up over the years and understand it better than almost anyone.
-    col-2:
+    list:
+      - icon: assets/img/icons/duotone-icons/Media/Repeat.svg
+        title: Bootstrap users since the beginning
+        text: We've been developing with Bootstrap since it was publicly released in 2011.
+      - icon: assets/img/icons/duotone-icons/Code/Code.svg
+        title: Deep understanding of Bootstrap
+        text: We've watched Bootstrap grow up over the years and understand it better than almost anyone.
+    card:
       shape: assets/img/shapes/blurs/blur-4.svg
       image: assets/img/screenshots/desktop/dashkit.jpg

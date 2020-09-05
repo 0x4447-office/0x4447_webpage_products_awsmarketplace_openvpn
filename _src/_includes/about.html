@@ -15,75 +15,31 @@
         <p class="font-size-lg text-muted mb-6">
           {{site.data.about.row-1.text}}
         </p>
-
+        {%- assign row11 = site.data.about.row-1.row -%}
         <!-- List -->
-            <div class="row">
-              <div class="col-12 col-lg-6">
-            
-                <!-- Item -->
-                <div class="d-flex">
-            
-                  <!-- Check -->
-                  <div class="badge badge-rounded-circle badge-success-soft mt-1 mr-4">
-                    <i class="fe fe-check"></i>
-                  </div>
-            
-                  <!-- Text -->
-                  <p class="text-success">
-                    Lifetime updates
-                  </p>
-            
-                </div>
-            
-                <!-- Item -->
-                <div class="d-flex">
-            
-                  <!-- Check -->
-                  <div class="badge badge-rounded-circle badge-success-soft mt-1 mr-4">
-                    <i class="fe fe-check"></i>
-                  </div>
-            
-                  <p class="text-success mb-lg-0">
-                    Tons of assets
-                  </p>
-            
-                </div>
-            
+        <div class="row">
+          {%- for col in row11 -%}
+          <div class="col-12 col-lg-6">
+            {%- for item in col -%}
+            <!-- Item -->
+            {%- for txt in item[1] -%}
+            <div class="d-flex">
+              <!-- Check -->
+              <div class="badge badge-rounded-circle badge-success-soft mt-1 mr-4">
+                <i class="fe fe-check"></i>
               </div>
-              <div class="col-12 col-lg-6 mb-6 mb-md-0">
-            
-                <!-- Item -->
-                <div class="d-flex">
-            
-                  <!-- Check -->
-                  <span class="badge badge-rounded-circle badge-success-soft mt-1 mr-4">
-                    <i class="fe fe-check"></i>
-                  </span>
-            
-                  <!-- Text -->
-                  <p class="text-success">
-                    Tech support
-                  </p>
-            
-                </div>
-            
-                <!-- Item -->
-                <div class="d-flex">
-            
-                  <!-- Check -->
-                  <div class="badge badge-rounded-circle badge-success-soft mr-1 mr-4">
-                    <i class="fe fe-check"></i>
-                  </div>
-            
-                  <!-- Text -->
-                  <p class="text-success mb-0">
-                    Integration ready
-                  </p>
-            
-                </div>
-            
-              </div>
-            </div> <!-- / .row -->
+              <!-- Text -->
+              <p class="text-success">
+                {{txt.text}}
+              </p>
+            </div>
+            {%- endfor -%}
+
+            {%- endfor -%}
+          </div>
+          {%- endfor -%}
+
+        </div> <!-- / .row -->
 
       </div>
 
@@ -149,8 +105,7 @@
         </p>
         {%- assign row = site.data.about.row-2.row -%}
         <!-- List -->
-        {%- assign list = row.col-1 -%}
-        {%- for item in list -%}
+        {%- for item in row.list -%}
         <div class="d-flex">
           <!-- Icon -->
           <div class="icon text-primary">
@@ -183,7 +138,7 @@
 
           <!-- Shape -->
           <div class="shape shape-fluid-y shape-blur-4 svg-shim text-gray-200">
-            <object type="image/svg+xml" data="{{row.col-2.shape}}" class="text-gray-600">
+            <object type="image/svg+xml" data="{{row.card.shape}}" class="text-gray-600">
               Your browser does not support SVG
             </object>
           </div>
@@ -191,7 +146,7 @@
           <!-- Image -->
           <div class="img-skewed img-skewed-left">
 
-            <img src="{{row.col-2.image}}" class="screenshot img-fluid img-skewed-item" alt="image">
+            <img src="{{row.card.image}}" class="screenshot img-fluid img-skewed-item" alt="image">
 
           </div>
 
