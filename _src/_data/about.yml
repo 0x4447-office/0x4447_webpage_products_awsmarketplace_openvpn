@@ -14,7 +14,7 @@ row-1:
         - text: Integration ready
   card:
     image: assets/img/photos/photo-2.jpg
-    shape: assets/img/shapes/curves/curve-1.svg
+    shape: img/shapes/curves/curve-1.svg
       
 row-2:
   title: >-
@@ -31,5 +31,5 @@ row-2:
         title: Deep understanding of Bootstrap
         text: We've watched Bootstrap grow up over the years and understand it better than almost anyone.
     card:
-      shape: assets/img/shapes/blurs/blur-4.svg
+      shape: img/shapes/blurs/blur-4.svg
       image: assets/img/screenshots/desktop/dashkit.jpg
