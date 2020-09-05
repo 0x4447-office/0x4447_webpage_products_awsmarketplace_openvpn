@@ -1,0 +1,55 @@
+{%- assign a = site.data.about.about -%}
+<section class="py-8 py-md-11 border-bottom">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-10 col-lg-8 text-center">
+
+        <!-- Headin -->
+        <h1 class="display-2">
+          {{page.title}}
+        </h1>
+
+        <!-- Text -->
+        <p class="lead text-muted mb-7 mb-md-9">
+          {{page.description}}
+        </p>
+
+      </div>
+    </div> <!-- / .row -->
+
+    <div class="row">
+
+      <div class="col-12">
+
+        <!-- Image -->
+        <div class="form-row">
+          <div class="col-4">
+            <img src="{{a.photos[0].photo}}" class="img-fluid rounded shadow-lg" alt="about">
+          </div>
+
+          <div class="col-3">
+            <img src="{{a.photos[1].photo}}" class="img-fluid rounded shadow-lg mb-4" alt="about">
+
+            <img src="{{a.photos[2].photo}}" class="img-fluid rounded shadow-lg mt-1" alt="about">
+          </div>
+
+          <div class="col-5">
+            <div class="form-row mb-4">
+              <div class="col-5">
+
+                <img src="{{a.photos[3].photo}}" class="img-fluid rounded shadow-lg" alt="about">
+
+              </div>
+
+              <div class="col-7">
+                <img src="{{a.photos[4].photo}}" class="img-fluid rounded shadow-lg" alt="about">
+              </div>
+            </div> <!-- / .row -->
+
+            <img src="{{a.photos[5].photo}}" class="img-fluid rounded shadow-lg mt-1" alt="about">
+          </div>
+        </div>
+      </div>
+    </div> <!-- / .row -->
+  </div> <!-- / .container -->
+</section>

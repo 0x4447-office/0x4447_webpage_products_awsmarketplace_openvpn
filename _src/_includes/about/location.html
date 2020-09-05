@@ -1,0 +1,72 @@
+<section class="pt-8 pt-md-0 border-bottom bg-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-6">
+        {%- assign a = site.data.about.about -%}
+        <!-- Map (mobile) -->
+        <div class="embed-responsive embed-responsive-1by1 d-md-none">
+          <div class="embed-responsive-item" data-toggle="map" data-options='{{a.location.map-1}}'></div>
+        </div>
+
+        <!-- Map -->
+        <div class="position-relative h-100 vw-50 float-right d-none d-md-block">
+
+          <!-- Map -->
+          <div class="h-100 w-100" data-toggle="map" data-options='{{a.location.map-2}}'>
+          </div>
+
+          <!-- Shape -->
+          <div class="shape shape-right shape-fluid-y svg-shim text-light">
+            {%- include {{a.location.shape}} -%}
+          </div>
+
+        </div>
+
+      </div>
+      <div class="col-12 col-md-6 col-lg-5 offset-lg-1 py-8 py-md-11 py-lg-12">
+
+        <!-- Heading -->
+        <h2>
+          {{a.location.title}}
+        </h2>
+
+        <!-- Text -->
+        <p class="font-size-lg text-gray-700 mb-6">
+          {{a.location.text}}
+        </p>
+
+        <!-- Stats -->
+        <div class="d-flex">
+          <div class="pr-5">
+            <h3 class="text-success mb-0">
+              <span data-toggle="countup" data-from="{{a.stat1_s}}" data-to="{{a.stat1_f}}" data-aos data-aos-id="countup:in">0</span>%
+            </h3>
+            <p class="text-gray-700 mb-0">
+              {{a.stat1_title}}
+            </p>
+          </div>
+          <div class="border-left border-gray-300"></div>
+          <div class="px-5">
+            <h3 class="text-success mb-0">
+              <span data-toggle="countup" data-from="0" data-to="85" data-aos data-aos-id="countup:in">0</span>%
+            </h3>
+            <p class="text-gray-700 mb-0">
+              {{a.stat2_title}}
+            </p>
+          </div>
+          <div class="border-left border-gray-300"></div>
+          <div class="pl-5">
+            <h3 class="text-success mb-0">
+              <span data-toggle="countup" data-from="0" data-to="{{a.stat3_s}}" data-aos data-aos-id="countup:in">0</span>/<span
+                data-toggle="countup" data-from="0" data-to="{{a.stat3_f}}" data-aos data-aos-id="countup:in">0</span>
+            </h3>
+            <p class="text-gray-700 mb-0">
+              {{a.stat3_title}}
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div> <!-- / .row -->
+  </div> <!-- / .container -->
+</section>
