@@ -24,10 +24,10 @@ row-2:
   text: We've built well over a dozen Bootstrap themes and sold tens of thousands of copies.
   row:
     list:
-      - icon: assets/img/icons/duotone-icons/Media/Repeat.svg
+      - icon: img/icons/duotone-icons/Media/Repeat.svg
         title: Bootstrap users since the beginning
         text: We've been developing with Bootstrap since it was publicly released in 2011.
-      - icon: assets/img/icons/duotone-icons/Code/Code.svg
+      - icon: img/icons/duotone-icons/Code/Code.svg
         title: Deep understanding of Bootstrap
         text: We've watched Bootstrap grow up over the years and understand it better than almost anyone.
     card:

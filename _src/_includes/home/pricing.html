@@ -1,19 +1,16 @@
-<!-- PRICING
-    ================================================== -->
 <section class="pt-9 pt-md-12 bg-gray-200">
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-12 col-md-10 col-lg-8 text-center">
-
+        {%- assign p = site.data.pricing -%}
         <!-- Heading -->
         <h1>
-          Fair, simple pricing for all.
+          {{p.form.title}}
         </h1>
 
         <!-- Text -->
         <p class="lead text-gray-700">
-          All types of businesses need access to development resources, so we give you the option to decide how much you
-          need to use.
+          {{p.form.text}}
         </p>
 
         <!-- Form -->
@@ -40,6 +37,7 @@
 
       </div>
     </div> <!-- / .row -->
+
     <div class="row align-items-center no-gutters">
       <div class="col-12 col-md-6">
 
@@ -54,101 +52,48 @@
                 <!-- Badge -->
                 <div class="text-center mb-5">
                   <span class="badge badge-pill badge-primary-soft">
-                    <span class="h6 font-weight-bold text-uppercase">Standard</span>
+                    <span class="h6 font-weight-bold text-uppercase">{{p.card_1.badge}}</span>
                   </span>
                 </div>
 
                 <!-- Price -->
                 <div class="d-flex justify-content-center">
                   <span class="h2 mb-0 mt-2">$</span>
-                  <span class="price display-2 mb-0" data-annual="29" data-monthly="49">29</span>
+                  <span class="price display-2 mb-0" data-annual="{{p.card_1.price.annual}}" data-monthly="{{p.card_1.price.monthly}}">{{p.card_1.price.annual}}</span>
                   <span class="h2 align-self-end mb-1">/mo</span>
                 </div>
 
                 <!-- Text -->
                 <p class="text-center text-muted mb-6 mb-md-8">
-                  per seat
+                  {{p.card_1.text}}
                 </p>
 
                 <!-- Features -->
+                {%- for f in p.card_1.features -%}
                 <div class="d-flex">
-
                   <!-- Check -->
                   <div class="badge badge-rounded-circle badge-success-soft mt-1 mr-4">
                     <i class="fe fe-check"></i>
                   </div>
-
                   <!-- Text -->
                   <p>
-                    Rich, responsive landing pages
+                    {{f.text}}
                   </p>
-
                 </div>
-                <div class="d-flex">
-
-                  <!-- Check -->
-                  <div class="badge badge-rounded-circle badge-success-soft mt-1 mr-4">
-                    <i class="fe fe-check"></i>
-                  </div>
-
-                  <!-- Text -->
-                  <p>
-                    100+ styled components
-                  </p>
-
-                </div>
-                <div class="d-flex">
-
-                  <!-- Check -->
-                  <div class="badge badge-rounded-circle badge-success-soft mt-1 mr-4">
-                    <i class="fe fe-check"></i>
-                  </div>
-
-                  <!-- Text -->
-                  <p>
-                    Flexible, simple license
-                  </p>
-
-                </div>
-                <div class="d-flex">
-
-                  <!-- Check -->
-                  <div class="badge badge-rounded-circle badge-success-soft mt-1 mr-4">
-                    <i class="fe fe-check"></i>
-                  </div>
-
-                  <!-- Text -->
-                  <p>
-                    Speedy build tooling
-                  </p>
-
-                </div>
-                <div class="d-flex">
-
-                  <!-- Check -->
-                  <div class="badge badge-rounded-circle badge-success-soft mt-1 mr-4">
-                    <i class="fe fe-check"></i>
-                  </div>
-
-                  <!-- Text -->
-                  <p class="mb-0">
-                    6 months free support included
-                  </p>
-
-                </div>
-
+                {%- endfor -%}
               </div>
             </div> <!-- / .row -->
           </div>
 
           <!-- Button -->
-          <a href="#!" class="card-btn btn btn-block btn-lg btn-primary">
-            Get it now
+          <a href="{{p.button_link}}" class="card-btn btn btn-block btn-lg btn-primary">
+            {{p.button_text}}
           </a>
 
         </div>
 
       </div>
+
       <div class="col-12 col-md-6 ml-md-n3">
 
         <!-- Card -->
@@ -162,14 +107,13 @@
                 <!-- Badge -->
                 <p class="text-center mb-8 mb-md-11">
                   <span class="badge badge-pill badge-primary-soft">
-                    <span class="h6 font-weight-bold text-uppercase">Enterprise</span>
+                    <span class="h6 font-weight-bold text-uppercase">{{p.card_2.badge}}</span>
                   </span>
                 </p>
 
                 <!-- Text -->
                 <p class="lead text-center text-muted mb-0 mb-md-10">
-                  We offer variable pricing with discounts for larger organizations. Get in touch with us and we’ll
-                  figure out something that works for everyone.
+                  {{p.card_2.text}}
                 </p>
 
               </div>

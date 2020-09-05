@@ -107,9 +107,7 @@
         <div class="d-flex">
           <!-- Icon -->
           <div class="icon text-primary">
-            <object type="image/svg+xml" data="{{item.icon}}" class="text-gray-600">
-              Your browser does not support SVG
-            </object>
+            {%- include {{item.icon}} -%}
           </div>
 
           <div class="ml-5">

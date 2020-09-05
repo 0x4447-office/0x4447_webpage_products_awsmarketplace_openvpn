@@ -3,25 +3,25 @@
     <div class="row justify-content-center">
       <div class="col-12 col-md-10 col-lg-8 text-center">
 
+        {%- assign cta = site.data.cta -%}
         <!-- Badge -->
         <span class="badge badge-pill badge-gray-700-soft mb-4">
-          <span class="h6 font-weight-bold text-uppercase">Get started</span>
+          <span class="h6 font-weight-bold text-uppercase">{{cta.badge}}</span>
         </span>
 
         <!-- Heading -->
         <h1 class="display-4 text-white">
-          Get Landkit and save your time.
+          {{cta.title}}
         </h1>
 
         <!-- Text -->
         <p class="font-size-lg text-muted mb-6 mb-md-8">
-          Stop wasting time trying to do it the "right way" and build a site from scratch. Landkit is faster, easier,
-          and you still have complete control.
+          {{cta.text}}
         </p>
 
         <!-- Button -->
-        <a href="https://themes.getbootstrap.com/product/landkit/" target="_blank" class="btn btn-success lift">
-          Buy it now <i class="fe fe-arrow-right"></i>
+        <a href="{{cta.button_link}}" target="_blank" class="btn btn-success lift">
+          {{cta.button_text}} <i class="fe fe-arrow-right"></i>
         </a>
 
       </div>
