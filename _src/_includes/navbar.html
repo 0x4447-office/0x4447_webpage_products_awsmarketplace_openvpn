@@ -61,10 +61,17 @@
                         {{item.title}}
                       </h6>
                       <!-- List -->
+                      {%- assign s = item.list.size -%}
+                      {%- assign i = 1 -%}
                       {%- for list_item in item.list -%}
-                      <a class="dropdown-item" href="{{list_item.link}}">
-                        {{list_item.name}}
+                      <a class="dropdown-item 
+                      {% if i == s %}
+                        mb-5
+                      {% endif %}
+                      " href="{{list_item.link}}">
+                        {{list_item.name}} {{i}}
                       </a>
+                      {%- assign i = i | plus: 1 -%}
                       {%- endfor -%}
                       {%- endfor -%}
                     </div>
