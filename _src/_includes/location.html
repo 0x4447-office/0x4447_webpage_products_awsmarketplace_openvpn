@@ -1,63 +1,9 @@
 <section class="pt-8 pt-md-0 border-bottom bg-light">
   <div class="container">
     <div class="row">
-      <div class="col-12 col-md-6">
-        {%- assign a = include -%}
-        <!-- Map (mobile) -->
-        <div class="embed-responsive embed-responsive-1by1 d-md-none">
-          <div class="embed-responsive-item" data-toggle="map" data-options='{{a.map}}'></div>
-        </div>
-
-        <!-- Map -->
-        <div class="position-relative h-100 vw-50 float-right d-none d-md-block">
-
-          <!-- Map -->
-          <div class="h-100 w-100" data-toggle="map" data-options='{{a.map}}'>
-          </div>
-
-          <!-- Shape -->
-          <div class="shape shape-right shape-fluid-y svg-shim text-light">
-            {%- include img/shapes/angles/angle-right.svg -%}
-          </div>
-
-        </div>
-
-      </div>
-      <div class="col-12 col-md-6 col-lg-5 offset-lg-1 py-8 py-md-11 py-lg-12">
-
-        <!-- Heading -->
-        <h2>
-          {{a.title}}
-        </h2>
-
-        <!-- Text -->
-        <p class="font-size-lg text-gray-700 mb-6">
-          {{a.text}}
-        </p>
-        <!-- Stats -->
-        {%- assign i = 0 -%}
-        <div class="d-flex">
-          {%- for s in a.stats -%}
-          {%- if i != 0 -%}
-          <div class="border-left border-gray-300"></div>
-          {%- endif -%}
-          <div class="px-5">
-            <h3 class="text-success mb-0">
-              {%- for v in s.values -%}
-              <span data-toggle="countup" data-from="{{v.val1}}" data-to="{{v.val2}}" data-aos
-                data-aos-id="countup:in">0</span>{{v.val3}}
-              {%- endfor -%}
-            </h3>
-            <p class="text-gray-700 mb-0">
-              {{s.title}}
-            </p>
-          </div>
-          {%- assign i = i | plus: 1 -%}
-          {%- endfor -%}
-
-        </div>
-
-      </div>
+      {%- assign a = include -%}
+      {%- include map.html -%}
+      {%- include counter.html -%}
     </div> <!-- / .row -->
   </div> <!-- / .container -->
 </section>
