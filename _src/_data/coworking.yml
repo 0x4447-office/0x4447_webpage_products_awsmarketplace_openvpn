@@ -1,0 +1,121 @@
+# welcome
+slider: 
+  mobile:
+    - image: assets/img/covers/cover-12.jpg
+    - image: assets/img/covers/cover-2.jpg
+  pc: 
+    - image: assets/img/covers/cover-9.jpg
+    - image: assets/img/covers/cover-2.jpg
+text: Where are you located?
+
+# flexible
+flex:
+  badge: Flexibility
+  title: Spaces for any size of team.
+  text : No matter what size your team, we have a solution. From single shared spaces to entire floors, it's available.
+  cards:
+    - title: Shared Coworking
+      image: assets/img/photos/photo-4.jpg
+      badge: $49/mo
+      badge-type: badge badge-pill badge-success
+      text: Open seating is available weekdays from 7am - 7pm and weekends from 9am - 5pm.
+      link: '#!'
+      name: Tour the space 
+    
+    - title: Designated Desk
+      image: assets/img/photos/photo-5.jpg
+      badge: $99/mo
+      badge-type: badge badge-pill badge-warning
+      text: A personal space to leave your computer, monitor, and supplies with unlimited access.
+      link: '#!'
+      name: Find a desk
+    
+    - title: Private Offices
+      image: assets/img/photos/photo-6.jpg
+      badge: $399/mo
+      badge-type: badge badge-pill badge-success
+      text: Need a private space? We have all sizes of offices from 400² ft. available up to 3100² ft.
+      link: '#!'
+      name: Tour the offices 
+
+# scalable
+scal:
+  image: assets/img/illustrations/illustration-1.png
+  badge: Scalable
+  title: >-
+    Flexible office space means <br>
+          <span class="text-primary">growing your team is easy</span>.
+  text: >-
+    Rather than worrying about switching offices every couple years, you can instead stay in the same location and
+          grow-up from your shared coworking space to an office that takes up an entire floor.
+  list:
+    - name: Add space anytime
+    - name: Group discounts
+    - name: Infinite flexibility
+    - name: Snacks included
+
+# locations
+location:
+  map: >-
+    {"center": [-118.244615, 34.052979], "zoom": 12}
+  title: >-
+    "Over <span data-toggle="countup" data-from="100" data-to="400" data-aos data-aos-id="countup:in">100</span>
+          locations spread <br>
+          <span class="text-success">across the entire planet</span>."
+  text: >-
+    "We picked our office locations to maximize our availability to you! We try to keep locations in every major
+          city, as well as common vacatino destinations in case you need to sneak work in on the side."
+stats:
+  - title  : Countries
+    values:
+    - val1: 0
+      val2: 125
+      val3: 
+
+  - title  : Cities
+    values:
+    - val1: 0
+      val2: 412
+      val3: 
+
+  - title  : Desks
+    values:
+    - val1: 0
+      val2: 40000
+      val3: 
+
+# Features
+features:
+  title: >-
+    <span class="text-primary">Everything</span> your team could need.
+  text: >-
+    We make sure to include all the amenities and niceties that a growing startup could possibly need.
+  cards:
+    - link : '#featuresOne'
+      title: Flexible access to facilities.
+      text : Our new key fobs make it so easy!
+      badge: New
+      info : >-
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt rerum minima a possimus, amet      erferendis, temporibus obcaecati pariatur. Reprehenderit magnam necessitatibus vel culpa  provident quas nesciunt sunt aut cupiditate fugiat! Lorem ipsum dolor sit amet, consectetur  adipisicing elit. Sunt rerum minima a possimus, amet perferendis, temporibus obcaecati pariatur. Reprehenderit magnam necessitatibus vel culpa provident quas nesciunt sunt aut cupiditate fugiat!
+      btn_link: '#!'
+      btn_name: Check it out
+      
+    - link : '#featuresOne'
+      title: Snacks, drinks, coffee, and more.
+      text : Keep your engine going with free food and drinks.
+      badge: 
+      info : >-
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt rerum minima a possimus, amet      erferendis, temporibus obcaecati pariatur. Reprehenderit magnam necessitatibus vel culpa  provident quas nesciunt sunt aut cupiditate fugiat! Lorem ipsum dolor sit amet, consectetur  adipisicing elit. Sunt rerum minima a possimus, amet perferendis, temporibus obcaecati pariatur. Reprehenderit magnam necessitatibus vel culpa provident quas nesciunt sunt aut cupiditate fugiat!
+      btn_link: '#!'
+      btn_name: Check it out
+
+    - link : '#featuresOne'
+      title: On site tech support
+      text : Connectivity, power, and IT issues solved in no time.
+      badge: 
+      info : >-
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt rerum minima a possimus, amet      erferendis, temporibus obcaecati pariatur. Reprehenderit magnam necessitatibus vel culpa  provident quas nesciunt sunt aut cupiditate fugiat! Lorem ipsum dolor sit amet, consectetur  adipisicing elit. Sunt rerum minima a possimus, amet perferendis, temporibus obcaecati pariatur. Reprehenderit magnam necessitatibus vel culpa provident quas nesciunt sunt aut cupiditate fugiat!
+      btn_link: '#!'
+      btn_name: Check it out
+
+

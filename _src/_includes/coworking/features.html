@@ -1,0 +1,94 @@
+{%- assign f = site.data.coworking.features -%}
+<section class="py-8 py-md-11 bg-light">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-10 col-lg-8 text-center">
+
+        <!-- Heading -->
+        <h2>
+          {{f.title}}
+        </h2>
+
+        <!-- Text -->
+        <p class="font-size-lg text-muted mb-7 mb-md-9 px-md-9">
+          {{f.text}}
+        </p>
+
+      </div>
+    </div> <!-- / .row -->
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-10 col-lg-8">
+
+        <!-- Card -->
+        <div class="card accordion" id="featuresAccordion">
+          <div class="card-body">
+
+            <!-- List group -->
+            <div class="list-group list-group-flush">
+              {%- assign i = 0 -%}
+              {%- for c in f.cards -%}
+
+              <div class="list-group-item">
+
+                <!-- Toggle -->
+                <a class="d-flex align-items-center text-reset text-decoration-none" data-toggle="collapse"
+                  href="{{c.link}}" role="button" {%- if i == 0 -%} aria-expanded="true" {%- else -%}
+                  aria-expanded="false" {%- endif -%} aria-controls="featuresOne">
+
+                  <div class="mr-auto">
+
+                    <!-- Title -->
+                    <p class="font-weight-bold mb-0">
+                      {{c.title}}
+                    </p>
+
+                    <!-- Text -->
+                    <p class="font-size-sm text-muted mb-0">
+                      {{c.text}}
+                    </p>
+
+                  </div>
+                  {%- if c.badge -%}
+                  <!-- Badge -->
+                  <span class="badge badge-pill badge-success-soft ml-4">
+                    <span class="h6 text-uppercase">{{c.badge}}</span>
+                  </span>
+                  {%- endif -%}
+
+                  <!-- Chevron -->
+                  <span class="collapse-chevron text-muted ml-4">
+                    <i class="fe fe-lg fe-chevron-down"></i>
+                  </span>
+
+                </a> <!-- / .row -->
+
+                <!-- Collapse -->
+                <div class="collapse 
+                {%- if i == 0 -%}
+                  show
+                {%- assign i = 1 -%}
+                {%- endif -%}
+                " id="featuresOne" data-parent="#featuresAccordion">
+                  <div class="py-5 py-mb-6">
+                    <p>
+                      {{c.info}}
+                    </p>
+                    <a href="{{btn_link}}" class="font-weight-bold text-decoration-none">
+                      {{btn_name}} <i class="fe fe-arrow-right ml-3"></i>
+                    </a>
+                  </div>
+                </div>
+
+              </div>
+
+              {%- endfor -%}
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div> <!-- / .row -->
+  </div> <!-- / .container -->
+</section>

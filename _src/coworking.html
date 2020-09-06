@@ -1,0 +1,54 @@
+---
+layout: default
+title: Coworking spaces built for <span class="text-success">startups.</span>
+description: We design and build coworking spaces tailored to the needs of growing teams.
+image: assets/img/covers/cover-12.jpg
+---
+
+<!-- MODALS
+    ================================================== -->
+{%- include modals.html -%}
+
+<!-- NAVBAR
+    ================================================== -->
+{%- include navbar.html -%}
+
+<!-- WELCOME
+    ================================================== -->
+{%- include coworking/welcome.html -%}
+<!-- FLEXIBILITY
+    ================================================== -->
+{%- include coworking/flex.html -%}
+
+<!-- SCALABLE
+    ================================================== -->
+{%- include coworking/scal.html -%}
+
+<!-- LOCATION
+    ================================================== -->
+{%- assign l = site.data.coworking -%}
+{%- include location.html 
+    map   = l.location.map 
+    title = l.location.title
+    text  = l.location.text
+    stats = l.stats -%}
+
+<!-- FEATURES
+    ================================================== -->
+{%- include coworking/features.html -%}
+
+<!-- SHAPE
+    ================================================== -->
+<div class="position-relative mt-n16">
+    <div class="shape shape-bottom shape-fluid-x svg-shim text-dark">
+        {%- include img/shapes/curves/curve-1.svg -%}
+    </div>
+</div>
+
+<!-- FOOTER
+    ================================================== -->
+<section class="pt-16 bg-dark">
+    {%- include footer.html class = page.footer
+        class="py-8 py-md-11 bg-dark border-top
+        border-gray-800-50" -%}
+</section>

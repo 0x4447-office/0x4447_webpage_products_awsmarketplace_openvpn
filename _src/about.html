@@ -1,7 +1,8 @@
 ---
 layout: default
 title : Small team. Big hearts.
-description: "Our focus is always on finding the best people to work with. Our bar is high, but you look ready to take on the challenge."
+description: "Our focus is always on finding the best people to work with. Our bar is high, but you look ready to take
+on the challenge."
 ---
 
 <!-- MODALS
@@ -13,14 +14,18 @@ description: "Our focus is always on finding the best people to work with. Our b
 {%- include navbar.html -%}
 
 
-<!-- WELCOME
-    
+<!-- WELCOME    
   ================================================== -->
- {%- include about/welcome.html -%}
+{%- include about/welcome.html -%}
 
 <!-- LOCATION
     ================================================== -->
-{%- include about/location.html -%}
+{%- assign l = site.data.about -%}
+{%- include location.html 
+    map   = l.location.map 
+    title = l.location.title
+    text  = l.location.text
+    stats = l.stats -%}
 
 <!-- COMPANIES
     ================================================== -->
@@ -60,3 +65,9 @@ description: "Our focus is always on finding the best people to work with. Our b
     </div> <!-- / .row -->
   </div> <!-- / .container -->
 </section>
+
+<!-- FOOTER
+    ================================================== -->
+{%- include footer.html
+    class="py-8 py-md-11 bg-white" -%}
+    

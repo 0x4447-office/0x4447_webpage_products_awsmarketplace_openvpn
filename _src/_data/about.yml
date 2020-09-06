@@ -6,11 +6,8 @@ photos:
   - photo: assets/img/photos/photo-20.jpg
   - photo: assets/img/photos/photo-21.jpg
 location:
-  map-1: >-
+  map: >-
     {"center": [-118.244615, 34.052979], "zoom": 12}
-  map-2: >- 
-    {"center": [-118.244615, 34.052979], "zoom": 12}
-  shape: img/shapes/angles/angle-right.svg
   title: >-
     "Located in Los Angeles.<br>
           <span class="text-success">Enjoy <span data-toggle="typed"
@@ -18,17 +15,26 @@ location:
   text: >-
     "We picked our office location to maximize our team's enjoyment! LA's best restaurants are within walking
           distance, as well are some of the finest coffee shops in the world. Come visit us and you'll agree."
-stat1_s: 0
-stat1_f: 85
-stat1_title: Approval
+stats:
+  - title  : Approval
+    values:
+    - val1: 0
+      val2: 100
+      val3: '%'
 
-stat2_s: 0
-stat2_f: 24
-stat2_title: Sunny days
+  - title : Sunny days
+    values:
+    - val1: 0
+      val2: 85
+      val3: '%'
 
-stat3_s: 52
-stat3_f: 48
-stat3_title: Gender ratio
+  - title  : Gender ratio
+    values:
+    - val1: 0
+      val2: 52
+      val3: /
+    - val1: 0
+      val2: 48
 
 companies:
   title: We strive to work with the best. <br />
