@@ -6,6 +6,7 @@ btn2_link: '#!'
 
 testimonials:
   - image: img/brands/logotype/airbnb.svg
+    color: '#FF5A5F'
     text1: >-
         "A very simple and modern template with a very harmonious color scheme. Also the additional plugins like
               the statistics are great and fit perfectly into the overall picture."
@@ -13,6 +14,7 @@ testimonials:
     text3: Dashkit customer
 
   - image: img/brands/logotype/coinbase.svg
+    color: '#0081C9'
     text1: >-
         “This has been my best theme purchase so far. Simple, beautiful, and I haven't had to make any major
             changes. It plays well with my changes as well, which is really nice!”
@@ -78,3 +80,12 @@ cust:
     Through the use of variables and a few config options you can completely change the look and feel of
           Dashkit. There's even an option to use an inverted color scheme.
     
+cta:
+  bg_image: assets/img/patterns/pattern-1.svg
+  badge: Get it done
+  title: Get Dashkit and save your time.
+  text : >-
+    Stop wasting time trying to do it the "right way" and build your app from scratch. Dashkit is faster, easier, and you still have complete control.
+  button_link: >-
+    #!
+  button_text: Check it out

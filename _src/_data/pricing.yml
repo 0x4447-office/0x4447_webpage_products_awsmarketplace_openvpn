@@ -1,0 +1,31 @@
+title: >-
+  Our pricing is incredibly <span class="text-success">simple and flexible.</span>
+text: >-
+  Companies of all sizes need access to Dashkit, so we have a flexible pricing system for any size of project
+          or company.
+card_1: 
+  badge: Annual
+  price:
+    annual: 29
+    monthly: 49
+  features:
+    - text: Single project use
+    - text: All components included
+    - text: All pages included
+    - text: Speedy build tooling
+    - text: 6 months free support included
+button_link: '#'
+card_2: 
+  badge: Extended
+  price:
+    annual: 49
+    monthly: 69
+  features:
+    - text: Single project use
+    - text: All components included
+    - text: All pages included
+    - text: Speedy build tooling
+    - text: 6 months free support included
+    - text: Unlimited users
+    - text: Free hugs
+button_link: '#'
