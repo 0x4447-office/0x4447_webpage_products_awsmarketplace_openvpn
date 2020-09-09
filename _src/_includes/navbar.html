@@ -1,0 +1,219 @@
+<nav class="navbar navbar-expand-lg navbar-light">
+  <div class="container-fluid">
+
+    <!-- Brand -->
+    <a class="navbar-brand" href="{{relative_url}}/index.html">
+      <img src="{{site.data.navbar.brand}}" class="navbar-brand-img" alt="...">
+    </a>
+
+    <!-- Toggler -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+      aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Collapse -->
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+
+      <!-- Toggler -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fe fe-x"></i>
+      </button>
+
+      {%- assign nav = site.data.navbar.navigation.landings -%}
+      <!-- Navigation -->
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarLandings" data-toggle="dropdown" href="{{nav.link}}"
+            aria-haspopup="true" aria-expanded="false">{{nav.title}}
+          </a>
+          <div class="dropdown-menu dropdown-menu-xl p-0" aria-labelledby="navbarLandings">
+            <div class="row no-gutters">
+              <div class="col-12 col-lg-6">
+                <div class="dropdown-img-left" style="background-image: url({{nav.banner.image}});">
+
+                  <!-- Heading -->
+                  <h4 class="font-weight-bold text-white mb-0">
+                    {{nav.banner.title}}
+                  </h4>
+
+                  <!-- Text -->
+                  <p class="font-size-sm text-white">
+                    {{nav.banner.text}}
+                  </p>
+
+                  <!-- Button -->
+                  <a href="{{nav.banner.link}}" class="btn btn-sm btn-white shadow-dark fonFt-size-sm">
+                    {{nav.banner.btn_text}}
+                  </a>
+
+                </div>
+              </div>
+              <div class="col-12 col-lg-6">
+                <div class="dropdown-body">
+                  <div class="row no-gutters">
+
+                    <div class="col-6">
+                      {%- for item in nav.items.col_1 -%}
+                      <!-- Heading -->
+                      <h6 class="dropdown-header">
+                        {{item.title}}
+                      </h6>
+                      <!-- List -->
+                      {%- assign s = item.list.size -%}
+                      {%- assign i = 1 -%}
+                      {%- for list_item in item.list -%}
+                      <a class="dropdown-item 
+                      {% if i == s %}
+                        mb-5
+                      {% endif %}
+                      " href="{{list_item.link}}">
+                        {{list_item.name}}
+                      </a>
+                      {%- assign i = i | plus: 1 -%}
+                      {%- endfor -%}
+                      {%- endfor -%}
+                    </div>
+
+                    <div class="col-6">
+                      {%- for item in nav.items.col_2 -%}
+                      <!-- Heading -->
+                      <h6 class="dropdown-header">
+                        {{item.title}}
+                      </h6>
+                      <!-- List -->
+                      {%- for list_item in item.list -%}
+                      <a class="dropdown-item" href="{{list_item.link}}">
+                        {{list_item.name}}
+                      </a>
+                      {%- endfor -%}
+                      {%- endfor -%}
+                    </div>
+
+                  </div> <!-- / .row -->
+                </div>
+              </div>
+            </div> <!-- / .row -->
+          </div>
+        </li>
+
+        {%- assign pages = site.data.navbar.navigation.pages -%}
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarPages" data-toggle="dropdown" href="#" aria-haspopup="true"
+            aria-expanded="false">
+            {{pages.title}}
+          </a>
+          <div class="dropdown-menu dropdown-menu-lg" aria-labelledby="navbarPages">
+            <div class="row no-gutters">
+              {%- for group in pages.list -%}
+              <div class="col-6">
+                <div class="row no-gutters">
+                  {%- for page in group.col_out -%}
+                  <div class="col-12 col-lg-6">
+                    {%- for item in page.col_in -%}
+                    <!-- Heading -->
+                    <h6 class="dropdown-header">
+                      {{item.title}}
+                    </h6>
+                    <!-- List -->
+                    {%- for subitem in item.subitems -%}
+                    <a class="dropdown-item" href="{{subitem.link}}">
+                      {{subitem.name}}
+                    </a>
+                    {%- endfor -%}
+                    {%- endfor -%}
+                  </div>
+                  {%- endfor -%}
+
+                </div>
+              </div>
+              {%- endfor -%}
+
+            </div>
+          </div> <!-- / .row -->
+        </li>
+
+        {%- assign account = site.data.navbar.navigation.account -%}
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarAccount" data-toggle="dropdown" href="#" aria-haspopup="true"
+            aria-expanded="false">
+            {{account.title}}
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarAccount">
+            {%- for item in account.items -%}
+            <li class="dropdown-item dropright">
+              <a class="dropdown-link dropdown-toggle" data-toggle="dropdown" href="#">
+                {{item.title}}
+                {%- if item.badge -%}
+                <span class="h6 text-uppercase text-primary align-self-center ml-1 mb-0"> {{item.badge}}</span>
+                {%- endif -%}
+              </a>
+              <div class="dropdown-menu">
+                {%- for subitem in item.list -%}
+                <a class="dropdown-item" href="{{subitem.link}}">
+                  {{subitem.name}}
+                </a>
+                {%- endfor -%}
+              </div>
+            </li>
+            {%- endfor -%}
+          </ul>
+        </li>
+
+        <!-- Documentation -->
+        {%- assign doc = site.data.navbar.navigation.documentation -%}
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDocumentation" data-toggle="dropdown" href="#"
+            aria-haspopup="true" aria-expanded="false">
+            {{doc.title}}
+          </a>
+          <div class="dropdown-menu dropdown-menu-md" aria-labelledby="navbarDocumentation">
+            <div class="list-group list-group-flush">
+              {%- for item in doc.items -%}
+              <a class="list-group-item" href="{{item.link}}">
+
+                <!-- Icon -->
+                <div class="icon icon-sm text-primary">
+                  <img src="{{item.icon}}" alt="icon">
+                </div>
+
+                <!-- Content -->
+                <div class="ml-4">
+
+                  <!-- Heading -->
+                  <h6 class="font-weight-bold text-uppercase text-primary mb-0">
+                    {{item.title}}
+                  </h6>
+
+                  <!-- Text -->
+                  <p class="font-size-sm text-gray-700 mb-0">
+                    {{item.text}}
+                  </p>
+                </div>
+                {%- if item.badge -%}
+                <!-- Badge -->
+                <span class="badge badge-pill badge-primary-soft ml-auto">
+                  {{item.badge}}
+                </span>
+                {%- endif -%}
+              </a>
+              {%- endfor -%}
+            </div>
+          </div>
+        </li>
+      </ul>
+
+      <!-- Button -->
+      {%- assign btn = site.data.navbar.navigation.button -%}
+      {%- if btn -%}
+      <a class="navbar-btn btn btn-sm btn-primary lift ml-auto" href="{{btn.link}}"
+        target="_blank">
+        {{btn.name}}
+      </a>
+      {%- endif -%}
+
+    </div>
+
+  </div>
+</nav>

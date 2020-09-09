@@ -1,0 +1,7 @@
+_draft
+_site
+gemfile.lock
+.sass-cache
+.jekyll-cache
+.jekyll-metadata
+vendor

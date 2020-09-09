@@ -1,0 +1,138 @@
+<section class="pt-9 pb-10 py-md-11">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-10 col-lg-8 text-center">
+        {%- assign p = site.data.pricing -%}
+        <!-- Badge -->
+        <span class="badge badge-pill badge-success-soft mb-3">
+          <span class="h6 text-uppercase">
+            Pricing
+          </span>
+        </span>
+
+        <!-- Heading -->
+        <h2>
+          {{p.title}}
+        </h2>
+
+        <!-- Text -->
+        <p class="lead text-gray-700">
+          {{p.text}}
+        </p>
+
+        <!-- Form -->
+        <form class="d-flex align-items-center justify-content-center mb-7 mb-md-9">
+
+          <!-- Label -->
+          <span class="text-muted">
+            Annual
+          </span>
+
+          <!-- Switch -->
+          <div class="custom-control custom-switch mx-3">
+            <input type="checkbox" class="custom-control-input" id="billingSwitch" data-toggle="price"
+              data-target=".price">
+            <label class="custom-control-label" for="billingSwitch"></label>
+          </div>
+
+          <!-- Label -->
+          <span class="text-muted">
+            Monthly
+          </span>
+
+        </form>
+
+      </div>
+    </div> <!-- / .row -->
+
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-6 col-lg-5">
+
+        <!-- Card -->
+        <div class="card card-border card-border-xl border-success shadow-light-lg mb-6 mb-md-0 lift lift-lg">
+          <div class="card-body">
+
+            <!-- Badge -->
+            <h6 class="font-weight-bold text-uppercase text-center text-success mb-5">{{p.card_1.badge}}</h6>
+
+            <!-- Price -->
+            <div class="d-flex justify-content-center">
+              <span class="h2 mb-0 mt-2">$</span>
+              <span class="price display-2 mb-0" data-annual="{{p.card_1.price.annual}}"
+                data-monthly="{{p.card_1.price.monthly}}">{{p.card_1.price.annual}}</span>
+              <span class="h2 align-self-end mb-1">/mo</span>
+            </div>
+
+            <!-- Text -->
+            <p class="text-center text-muted mb-6 mb-md-8">
+              per seat
+            </p>
+
+            <!-- List -->
+
+            {%- for f in p.card_1.features -%}
+            <div class="d-flex">
+
+              <!-- Badge -->
+              <span class="badge badge-rounded-circle badge-success-soft mt-1 mr-4">
+                <i class="fe fe-check"></i>
+              </span>
+
+              <!-- Text -->
+              <p>
+                {{f.text}}
+              </p>
+
+            </div>
+            {%- endfor -%}
+
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-5">
+
+        <!-- Card 2 -->
+        <div class="card card-border card-border-xl border-dark shadow-light-lg lift lift-lg">
+          <div class="card-body">
+
+            <!-- Badge -->
+            <h6 class="font-weight-bold text-uppercase text-center mb-5">{{p.card_2.badge}}</h6>
+
+            <!-- Price -->
+            <div class="d-flex justify-content-center">
+              <span class="h2 mb-0 mt-2">$</span>
+              <span class="price display-2 mb-0" data-annual="{{p.card_2.price.annual}}"
+                data-monthly="{{p.card_2.price.monthly}}">{{p.card_2.price.annual}}</span>
+              <span class="h2 align-self-end mb-1">/mo</span>
+            </div>
+
+            <!-- Text -->
+            <p class="text-center text-muted mb-6 mb-md-8">
+              per seat
+            </p>
+
+            <!-- List -->
+            {%- for f in p.card_2.features -%}
+            <div class="d-flex">
+
+              <!-- Badge -->
+              <span class="badge badge-rounded-circle badge-success-soft mt-1 mr-4">
+                <i class="fe fe-check"></i>
+              </span>
+
+              <!-- Text -->
+              <p>
+                {{f.text}}
+              </p>
+
+            </div>
+            {%- endfor -%}
+
+          </div>
+        </div>
+      </div>
+    </div> <!-- / .row -->
+  </div> <!-- / .container -->
+</section>
