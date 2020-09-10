@@ -1,75 +1,35 @@
 brand : assets/img/brand.svg
 text  : A better way to build.
 social:
-  - title: instagram
-    link : "#!"
-    image: /assets/img/icons/social/instagram.svg
   - title: facebook
     link : "#!"
     image: /assets/img/icons/social/facebook.svg
   - title: twitter
     link : "#!"
     image: /assets/img/icons/social/twitter.svg
-  - title: pinterest
+  - title: linkedin
     link : "#!"
-    image: /assets/img/icons/social/pinterest.svg
+    image: /assets/img/icons/social/linkedin.svg
+  - title: youtube
+    link : "#!"
+    image: /assets/img/icons/social/youtube.svg
 
 products_title: Products
 products:
-  - title: Page Builder
+  - title: Open VPH      <div class="col-12 col-md-4 col-lg-3">
     link : "#!"
 
-  - title: UI Kit
+  - title: Samba
     link : "#!"
 
-  - title: Styleguide
-    link : "#!"
-
-  - title: Documentation
-    link : "#!"
-
-  - title: Changelog
-    link : "#!"
-
-services_title: Services
-services:
-  - title: Documentation
-    link : "#!"
-
-  - title: Changelog
-    link : "#!"
-
-  - title: Pagebuilder
-    link : "#!"
-
-  - title: UI Kit
-    link : "#!"
-
-connect_title: Connect
-connect:
-  - title: Page Builder
-    link : "#!"
-
-  - title: UI Kit
-    link : "#!"
-
-  - title: Styleguide
-    link : "#!"
-
-  - title: Documentation
-    link : "#!"
-
-  - title: Changelog
+  - title: Rsyslov
     link : "#!"
 
 legal_title: Legal
 legal:
-  - title: Documentation
-    link : "#!"
+  - title: Privacy Policy
+    link : "privacy.html"
 
-  - title: Changelog
-    link : "#!"
-
-  - title: Pagebuilder
-    link : "#!"
+  - title: Terms of Services
+    link : "terms.html"
 
