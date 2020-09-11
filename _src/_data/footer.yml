@@ -16,20 +16,20 @@ social:
 
 products_title: Products
 products:
-  - title: Open VPH      <div class="col-12 col-md-4 col-lg-3">
+  - title: OpenVPN Server      <div class="col-12 col-md-4 col-lg-3">
     link : "#!"
 
-  - title: Samba
+  - title: Samba Server
     link : "#!"
 
-  - title: Rsyslov
+  - title: Rsyslog Server
     link : "#!"
 
 legal_title: Legal
 legal:
   - title: Privacy Policy
-    link : "privacy.html"
+    link : "https://legal.0x4447.com/PAGE.0x4447.com/privacy_policy.pdf"
 
   - title: Terms of Services
-    link : "terms.html"
+    link : "https://legal.0x4447.com/PAGE.0x4447.com/terms_of_service.pdf"
 
