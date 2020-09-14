@@ -1,75 +1,35 @@
 brand : assets/img/brand.svg
 text  : A better way to build.
 social:
-  - title: instagram
-    link : "#!"
-    image: /assets/img/icons/social/instagram.svg
   - title: facebook
     link : "#!"
     image: /assets/img/icons/social/facebook.svg
   - title: twitter
     link : "#!"
     image: /assets/img/icons/social/twitter.svg
-  - title: pinterest
+  - title: linkedin
     link : "#!"
-    image: /assets/img/icons/social/pinterest.svg
+    image: /assets/img/icons/social/linkedin.svg
+  - title: youtube
+    link : "#!"
+    image: /assets/img/icons/social/youtube.svg
 
 products_title: Products
 products:
-  - title: Page Builder
+  - title: OpenVPN Server
     link : "#!"
 
-  - title: UI Kit
+  - title: Samba Server
     link : "#!"
 
-  - title: Styleguide
-    link : "#!"
-
-  - title: Documentation
-    link : "#!"
-
-  - title: Changelog
-    link : "#!"
-
-services_title: Services
-services:
-  - title: Documentation
-    link : "#!"
-
-  - title: Changelog
-    link : "#!"
-
-  - title: Pagebuilder
-    link : "#!"
-
-  - title: UI Kit
-    link : "#!"
-
-connect_title: Connect
-connect:
-  - title: Page Builder
-    link : "#!"
-
-  - title: UI Kit
-    link : "#!"
-
-  - title: Styleguide
-    link : "#!"
-
-  - title: Documentation
-    link : "#!"
-
-  - title: Changelog
+  - title: Rsyslog Server
     link : "#!"
 
 legal_title: Legal
 legal:
-  - title: Documentation
-    link : "#!"
+  - title: Privacy Policy
+    link : "https://legal.0x4447.com/PAGE.0x4447.com/privacy_policy.pdf"
 
-  - title: Changelog
-    link : "#!"
-
-  - title: Pagebuilder
-    link : "#!"
+  - title: Terms of Services
+    link : "https://legal.0x4447.com/PAGE.0x4447.com/terms_of_service.pdf"
 
