@@ -1,0 +1,10 @@
+image_mobile: 'assets/img/photos/photo-3.jpg'
+image_desktop: 'assets/img/covers/cover-14.jpg'
+image_alt: Thank You!
+message1 : Thanks, your demo is on the way to your inbox!
+message2 : You are ready to speak about bla bla bla?
+message3 : That's great! Just answer a few questions...
+input_name: question1
+input_caption: what product?
+button_title: Next
+button_link: '#'

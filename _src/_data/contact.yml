@@ -1,0 +1,19 @@
+image_mobile: assets/img/photos/photo-5.jpg
+image_desktop: assets/img/covers/cover-10.jpg
+image_alt: Our goal is to be as helpful as possible.
+inputs:
+  - name: firstName
+    caption: First Name
+    required: true
+  - name: lastName
+    caption: Last Name
+    required: true
+  - name: companyName
+    caption: Company Name
+    required: false
+  - name: email
+    caption: Email
+    required: true
+button:
+  title: Send message
+  link : '/thanks'
