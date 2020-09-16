@@ -82,10 +82,11 @@ cust:
     
 cta:
   bg_image: assets/img/patterns/pattern-1.svg
-  badge: Get it done
+  badge: GET A DEMO
   title: Get Dashkit and save your time.
   text : >-
     Stop wasting time trying to do it the "right way" and build your app from scratch. Dashkit is faster, easier, and you still have complete control.
   button_link: >-
-    #!
-  button_text: Check it out
+    /contact_us
+  button_text: Schedule a Demo
+  demo: /demo

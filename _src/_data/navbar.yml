@@ -3,10 +3,10 @@ navigation:
   - title: Home
     link: './'
   - title: Features
-    link: '#Features'
+    link: './#'
   - title: Price
-    link: '#Price'
+    link: './#Price'
   - title: Support
-    link: '#Support'
+    link: './#Support'
   - title: Documentatio
-    link: '#'
+    link: './#'
