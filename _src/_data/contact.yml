@@ -16,4 +16,4 @@ inputs:
     required: true
 button:
   title: Send message
-  link : '/thanks'
+  link : '/thankyou'
