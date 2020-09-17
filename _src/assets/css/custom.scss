@@ -1,0 +1,24 @@
+---
+---
+
+.table-fix {
+  overflow-y: auto;
+}
+
+.table-fix table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.table-fix th {
+  position: sticky;
+  top: 0;
+  background: #eee;
+}
+@media (max-width: 767px) {
+  .pricing-table {
+    .card-body {
+      padding: 0;
+    }
+  }
+}
