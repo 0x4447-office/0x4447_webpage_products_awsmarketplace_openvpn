@@ -29,13 +29,21 @@ table:
       - row: 35
       - row: 36
   - col:
-      - row: HOURLY
+      - row: DAILY
       - row: 41
       - row: 42
       - row: 43
       - row: 44
       - row: 46
       - row: 46
+  - col:
+      - row: HOURLY
+      - row: 51
+      - row: 52
+      - row: 53
+      - row: 54
+      - row: 56
+      - row: 56
 table_height: 400px
     
    
