@@ -1,0 +1,133 @@
+{
+    "title": "Our pricing is incredibly <span class=\"text-success\">simple and flexible.</span>",
+    "text": "Companies of all sizes need access to Dashkit, so we have a flexible pricing system for any size of project or company.",
+    "badge": "Pricing",
+    "table": [
+        {
+            "col": [
+                {
+                    "row": "EC2 INSTANCE"
+                },
+                {
+                    "row": 11
+                },
+                {
+                    "row": 12
+                },
+                {
+                    "row": 13
+                },
+                {
+                    "row": 14
+                },
+                {
+                    "row": 15
+                },
+                {
+                    "row": 16
+                }
+            ]
+        },
+        {
+            "col": [
+                {
+                    "row": "ANNUALLY"
+                },
+                {
+                    "row": 21
+                },
+                {
+                    "row": 22
+                },
+                {
+                    "row": 23
+                },
+                {
+                    "row": 24
+                },
+                {
+                    "row": 25
+                },
+                {
+                    "row": 26
+                }
+            ]
+        },
+        {
+            "col": [
+                {
+                    "row": "MONTHLY"
+                },
+                {
+                    "row": 31
+                },
+                {
+                    "row": 32
+                },
+                {
+                    "row": 33
+                },
+                {
+                    "row": 34
+                },
+                {
+                    "row": 35
+                },
+                {
+                    "row": 36
+                }
+            ]
+        },
+        {
+            "col": [
+                {
+                    "row": "DAILY"
+                },
+                {
+                    "row": 41
+                },
+                {
+                    "row": 42
+                },
+                {
+                    "row": 43
+                },
+                {
+                    "row": 44
+                },
+                {
+                    "row": 46
+                },
+                {
+                    "row": 46
+                }
+            ]
+        },
+        {
+            "col": [
+                {
+                    "row": "HOURLY"
+                },
+                {
+                    "row": 51
+                },
+                {
+                    "row": 52
+                },
+                {
+                    "row": 53
+                },
+                {
+                    "row": 54
+                },
+                {
+                    "row": 56
+                },
+                {
+                    "row": 56
+                }
+            ]
+        }
+    ],
+    "table_height": "400px"
+}

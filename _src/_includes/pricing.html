@@ -26,23 +26,23 @@
     <!-- Picing table -->
     <div class="card pricing-table">
       <div class="card-body">
-
+{{site.data.pricing_back.table.[0][0]]}}
         <div class="table-responsive  table-fix"  style="height: {{p.table_height}};">
           <table class="table table-striped">
             <thead>
               {%- assign s = p.table | size | minus: 1 -%}
               <tr>
                 {%- for i in (0..s) -%}
-                  <th scope="col">{{p.table[i].col[0].row}}</th>
+                  <th scope="col">{{p.table[i].[0]}}</th>
                 {%- endfor -%}
               </tr>
             </thead>
             <tbody>
-              {%- assign r = p.table[0].col.size | minus: 1 -%}
+              {%- assign r = p.table[0].size | minus: 1 -%}
               {%- for n in (1..r) -%}
                 <tr>
                   {%- for i in (0..s) -%}
-                  <td scope="row">{{p.table[i].col[n].row}}</td>
+                  <td scope="row">{{p.table[i].[n]}}</td>
                   {%- endfor -%}
                 </tr>
               {%- endfor -%}
