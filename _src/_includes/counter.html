@@ -11,17 +11,14 @@
   </p>
   <!-- Stats -->
   {%- assign i = 0 -%}
-  <div class="d-flex">
+  <div class="row">
     {%- for s in a.stats -%}
-    {%- if i != 0 -%}
-    <div class="border-left border-gray-300"></div>
-    {%- endif -%}
     {%- if i==0 -%}
-    {%- assign c = "pr-5" -%} 
+    {%- assign c = "pl-3 pr-3" -%} 
     {%- elsif i==1 -%}
-    {%- assign c = "px-5" -%} 
+    {%- assign c = "pl-3 pr-3 border-left border-gray-300" -%} 
     {%- else -%}
-    {%- assign c = "pl-5" -%} 
+    {%- assign c = "pl-3 pr-3 border-left border-gray-300" -%} 
     {%- endif -%}
     <div class="{{c}}">
       <h3 class="mb-0">
@@ -30,7 +27,7 @@
           data-aos-id="countup:in">0</span>{{v.val3}}
         {%- endfor -%}
       </h3>
-      <p class="text-gray-700 mb-0">
+      <p class="text-gray-700 mb-0" style="word-break: break-all;">
         {{s.title}}
       </p>
     </div>
