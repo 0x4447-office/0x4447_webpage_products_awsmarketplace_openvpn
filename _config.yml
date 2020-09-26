@@ -22,14 +22,15 @@ excerpt_separator: <!--more-->
 defaults:
   -
     scope:
-      path: 'assets/**'
+      path: 'assets/libs/**'
     values:
       sitemap: false
   -
     scope:
-      path: "demo.html"
+      path: 'assets/js/**'
     values:
       sitemap: false
+
 #  - scope:
 #      path: ""
 #      type: "services"
