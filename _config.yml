@@ -19,7 +19,17 @@ excerpt_separator: <!--more-->
 #  pages:
 #    output: true
 
-#defaults:
+defaults:
+  -
+    scope:
+      path: 'assets/**'
+    values:
+      sitemap: false
+  -
+    scope:
+      path: "demo.html"
+    values:
+      sitemap: false
 #  - scope:
 #      path: ""
 #      type: "services"
