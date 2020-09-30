@@ -3,10 +3,12 @@ navigation:
   - title: Home
     link: './'
   - title: Features
-    link: './#'
+    link: './#features'
   - title: Price
     link: './#Price'
   - title: Support
     link: './#Support'
-  - title: Documentatio
-    link: './#'
+  - title: Documentation
+    link: 'https://documentation.0x4447.com/'
+  - title: Demo
+    link: './demo'

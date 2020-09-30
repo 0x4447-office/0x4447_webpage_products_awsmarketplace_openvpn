@@ -2,7 +2,7 @@ image: assets/img/screenshots/desktop/dashkit.jpg
 btn1_name: Subskribe Now
 btn1_link: '#!'
 btn2_name: Learn more
-btn2_link: '#!'
+btn2_link: './#features'
 
 testimonials:
   - image: img/brands/logotype/airbnb.svg
