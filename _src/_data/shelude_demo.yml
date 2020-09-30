@@ -5,15 +5,21 @@ inputs:
   - name: firstName
     caption: First Name
     required: true
+    type: text
   - name: lastName
     caption: Last Name
     required: true
+    type: text
   - name: companyName
     caption: Company Name
     required: false
+    type: text
   - name: email
     caption: Email
     required: true
+    type: email
+textarea:
+  caption: Short company description
 button:
-  title: Send message
+  title: Send Request
   link : '/thankyou'

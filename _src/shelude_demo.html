@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Contact Us
-headline : Contact us for anything.
+title: Shelude a Demo
+headline : Get in touch with our specialists.
 
 description: Our goal is to be as helpful as possible.
 ---
@@ -14,7 +14,7 @@ description: Our goal is to be as helpful as possible.
     <!-- CONTENT
     ================================================== -->
     <section>
-      {%- assign c = site.data.contact -%}
+      {%- assign c = site.data.shelude_demo -%}
       <!-- Content -->
       <div class="container d-flex flex-column">
         <div class="row align-items-center justify-content-between no-gutters min-vh-100">
@@ -36,7 +36,7 @@ description: Our goal is to be as helpful as possible.
             
             <!-- Text -->
             <p class="font-size-lg text-center text-muted mb-0">
-              {{page.description}}
+              {{page.headline}}
             </p>
             
             <!-- Divider -->
@@ -54,10 +54,17 @@ description: Our goal is to be as helpful as possible.
                   </label>
   
                   <!-- Input -->
-                  <input type="text" class="form-control" id="{{i.name}}" placeholder="{{i.caption}}">
+                  <input type="{{i.type}}" class="form-control" id="{{i.name}}" placeholder="{{i.caption}}">
   
                 </div>
               {%- endfor -%}
+
+              <div class="form-group mb-5">
+                <label for="contactName">
+                  {{c.textarea.caption}}
+                </label>
+                <textarea name="{{c.textarea.name}}" class="form-control" id="{{c.textarea.id}}" placeholder="{{c.textarea.caption}}"></textarea>
+              </div>
 
               <div class="form-group mb-0">
                 
