@@ -1,6 +1,7 @@
 image_mobile: assets/img/photos/photo-5.jpg
 image_desktop: assets/img/covers/cover-10.jpg
 image_alt: Our goal is to be as helpful as possible.
+product: Product
 inputs:
   - name: firstName
     caption: First Name
