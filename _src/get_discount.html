@@ -1,0 +1,112 @@
+---
+layout: default
+title: Get Discount
+headline : Get in touch with our specialists.
+
+description: Our goal is to be as helpful as possible.
+---
+
+<body class="bg-light">
+
+  <!-- NAVBAR
+    ================================================== -->
+  {%- include navbar.html -%}
+  <!-- CONTENT
+    ================================================== -->
+  <section>
+    {%- assign c = site.data.get_discount -%}
+    <!-- Content -->
+    <div class="container d-flex flex-column">
+      <div class="row align-items-center justify-content-between no-gutters min-vh-100">
+        <div class="col-12 py-8 py-md-11">
+
+          <!-- Heading -->
+          <h1 class="font-weight-bold text-center mb-2">
+            {{page.title}} for {{c.product}}
+          </h1>
+
+          <!-- Text -->
+          <p class="font-size-lg text-center text-muted mb-0">
+            {{page.headline}}
+          </p>
+
+          <!-- Divider -->
+          <hr class="hr-sm my-6 my-md-8 border-gray-300">
+
+          <!-- Form -->
+
+          <form>
+            <div class="row">
+              {%- for i in c.inputs -%}
+
+              <div class="form-group col-sm-12 col-md-6 mb-5">
+
+                <!-- Label -->
+                <label for="contactName">
+                  {{i.caption}}
+                </label>
+
+                <!-- Input -->
+                <input type="{{i.type}}" class="form-control" id="{{i.name}}" placeholder="{{i.caption}}">
+
+              </div>
+              {%- endfor -%}
+            </div>
+
+            <div class="form-group mb-5">
+              <label for="{{c.industry.name}}">
+                {{c.industry.caption}}
+              </label>
+              <input name="{{c.industry.name}}" type="{{c.industry.name}}" class="form-control" id="{{c.industry.id}}" name="{{c.industry.id}}"
+                placeholder="{{c.industry.caption}}">
+            </input>
+            </div>
+
+            <div class="form-group mb-5">
+              <label for="contactName">
+                {{c.textarea.caption}}
+              </label>
+              <textarea name="{{c.textarea.name}}" class="form-control" id="{{c.textarea.id}}" name="{{c.textarea.id}}"
+                placeholder="{{c.textarea.caption}}">
+            </textarea>
+            </div>
+
+            <div class="form-group mb-5">
+              <input type="checkbox" id="{{c.check.name}}" name="{{c.check.name}}">
+              <label for="{{c.check.name}}">{{c.check.label}}</label>
+            </div>
+
+            <div class="form-group mb-0">
+
+              <!-- Submit -->
+              <a href="{{c.button.link}}" class="btn btn-block btn-primary lift">
+                {{c.button.title}}
+              </a>
+
+            </div>
+          </form>
+
+        </div>
+      </div> <!-- / .row -->
+    </div>
+  </section>
+
+  <!-- JAVASCRIPT
+    ================================================== -->
+
+  <!-- CURVE
+          ================================================== -->
+  <div class="position-relative">
+    <div class="shape shape-bottom shape-fluid-x svg-shim text-gray-200">
+      {%- include img/shapes/curves/curve-1.svg -%}
+    </div>
+  </div>
+
+  <!-- FOOTER
+          ================================================== -->
+  {%- include footer.html
+          class="py-8 py-md-11 bg-gray-200" -%}
+
+  {%- include scripts.html -%}
+
+</body>
