@@ -18,7 +18,7 @@ inputs:
     type: email
 industry:
   name: industry
-  type: text
+  type: select
   caption: Industry
 textarea:
   caption: Short company description

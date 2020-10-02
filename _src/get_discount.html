@@ -42,12 +42,12 @@ description: Our goal is to be as helpful as possible.
               <div class="form-group col-sm-12 col-md-6 mb-5">
 
                 <!-- Label -->
-                <label for="contactName">
+                <label for="{{i.name}}">
                   {{i.caption}}
                 </label>
 
                 <!-- Input -->
-                <input type="{{i.type}}" class="form-control" id="{{i.name}}" placeholder="{{i.caption}}">
+                <input type="{{i.type}}" class="form-control" id="{{i.name}}" name="{{i.name}}" placeholder="{{i.caption}}">
 
               </div>
               {%- endfor -%}
@@ -57,9 +57,19 @@ description: Our goal is to be as helpful as possible.
               <label for="{{c.industry.name}}">
                 {{c.industry.caption}}
               </label>
-              <input name="{{c.industry.name}}" type="{{c.industry.name}}" class="form-control" id="{{c.industry.id}}" name="{{c.industry.id}}"
-                placeholder="{{c.industry.caption}}">
-            </input>
+              {%- if c.industry.type == "text" -%}
+                <input name="{{c.industry.name}}" type="text" class="form-control" id="{{c.industry.id}}" name="{{c.industry.id}}"
+                  placeholder="{{c.industry.caption}}">
+              </input>
+              {%- else -%}
+              <select name="{{c.industry.name}}" id="{{c.industry.name}}" class="form-control" >
+                {%- for i in site.data.industries -%}
+                  <option value="{{i.item}}">{{i.item}}</option>
+
+                  {{item.item}}
+                {%- endfor -%}
+              </select>
+              {%- endif -%}
             </div>
 
             <div class="form-group mb-5">
