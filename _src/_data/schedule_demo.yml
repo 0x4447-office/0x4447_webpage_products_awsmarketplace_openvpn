@@ -21,6 +21,8 @@ inputs:
     type: email
 textarea:
   caption: Short company description
+  name: short_description
+  id: short_description
 button:
   title: Send Request
   link : '/thankyou'
