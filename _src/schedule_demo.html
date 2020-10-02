@@ -42,21 +42,21 @@ description: Our goal is to be as helpful as possible.
               <div class="form-group col-sm-12 col-md-6 mb-5">
 
                 <!-- Label -->
-                <label for="contactName">
+                <label for="id="{{i.name}}">
                   {{i.caption}}
                 </label>
 
                 <!-- Input -->
-                <input type="{{i.type}}" class="form-control" id="{{i.name}}" placeholder="{{i.caption}}">
+                <input type="{{i.type}}" class="form-control" id="{{i.name}}" name="{{i.name}}" placeholder="{{i.caption}}">
 
               </div>
               {%- endfor -%}
             </div>
             <div class="form-group mb-5">
-              <label for="contactName">
+              <label for="{{c.textarea.name}}">
                 {{c.textarea.caption}}
               </label>
-              <textarea name="{{c.textarea.name}}" class="form-control" id="{{c.textarea.id}}"
+              <textarea name="{{c.textarea.name}}" class="form-control" id="{{c.textarea.name}}"
                 placeholder="{{c.textarea.caption}}"></textarea>
             </div>
 
