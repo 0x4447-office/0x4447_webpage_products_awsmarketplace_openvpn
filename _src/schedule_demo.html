@@ -47,7 +47,7 @@ description: Our goal is to be as helpful as possible.
                 </label>
 
                 <!-- Input -->
-                <input type="{{i.type}}" class="form-control" id="{{i.name}}" name="{{i.name}}" placeholder="{{i.caption}}">
+                <input type="{{i.type}}" class="form-control" id="{{i.name}}" name="{{i.name}}" placeholder="{{i.placeholder}}" minlength="3" {{i.required}}>
 
               </div>
               {%- endfor -%}
@@ -57,7 +57,7 @@ description: Our goal is to be as helpful as possible.
                 {{c.textarea.caption}}
               </label>
               <textarea name="{{c.textarea.name}}" class="form-control" id="{{c.textarea.name}}"
-                placeholder="{{c.textarea.caption}}"></textarea>
+                placeholder="{{c.textarea.placeholder}}"></textarea>
             </div>
 
             <div class="form-group mb-0">

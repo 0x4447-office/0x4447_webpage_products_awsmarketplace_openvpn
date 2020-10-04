@@ -5,21 +5,26 @@ product: Product
 inputs:
   - name: firstName
     caption: First Name
-    required: true
+    placeholder: Enter your First Name
+    required: required
     type: text
   - name: companyName
     caption: Company Name
-    required: false
+    placeholder: Enter Company Name
+    required: required
     type: text
   - name: lastName
     caption: Last Name
-    required: true
+    placeholder: Enter your Last Name
+    required: required
     type: text
   - name: email
     caption: Email
-    required: true
+    placeholder: Enter a valid email address
+    required: required
     type: email
 textarea:
+  placeholder: Enter short company description
   caption: Short company description
   name: short_description
 button:

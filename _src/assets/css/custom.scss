@@ -15,6 +15,13 @@
   top: 0;
   background: #eee;
 }
+.form-control:required:valid {
+  border: 2px solid lightgreen;
+}
+.form-control:focus:invalid {
+  border: 2px solid darkred;
+}
+
 @media (max-width: 767px) {
   .pricing-table {
     .card-body {
