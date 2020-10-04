@@ -1,0 +1,32 @@
+product: Product
+inputs:
+  - name: firstName
+    caption: First Name
+    required: true
+    type: text
+  - name: companyName
+    caption: Company Name
+    required: false
+    type: text
+  - name: lastName
+    caption: Last Name
+    required: true
+    type: text
+  - name: email
+    caption: Email
+    required: true
+    type: email
+industry:
+  name: industry
+  type: text
+  caption: Industry
+textarea:
+  caption: Use Case
+  id: use_case
+check:
+  label: I agree that I will have email
+  required: true
+  name: agree
+button:
+  title: Send Request
+  link : '/thankyou'
