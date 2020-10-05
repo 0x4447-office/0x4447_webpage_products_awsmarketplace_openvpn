@@ -37,4 +37,6 @@ check:
   name: agree
 button:
   title: Send Request
-thanks : /thankyou
+thanks : 
+  url : /get_discount/thankyou
+  text: You discount is 10%! 

@@ -35,7 +35,7 @@ description: Our goal is to be as helpful as possible.
 
           <!-- Form -->
 
-          <form action="{{c.thanks}}" method={{c.method}}>
+          <form action="{{c.thanks.url}}" method={{c.method}}>
             <div class="row">
               {%- for i in c.inputs -%}
 
@@ -47,11 +47,12 @@ description: Our goal is to be as helpful as possible.
                 </label>
 
                 <!-- Input -->
-                <input type="{{i.type}}" class="form-control" id="{{i.name}}" name="{{i.name}}" placeholder="{{i.placeholder}}" minlength="3" {{i.required}}>
+                <input type="{{i.type}}" class="form-control" id="{{i.name}}" name="{{i.name}}" placeholder="{{i.placeholder}}" minlength="3" {{i.required}} />
 
               </div>
               {%- endfor -%}
             </div>
+
             <div class="form-group mb-5">
               <label for="{{c.textarea.name}}">
                 {{c.textarea.caption}}
@@ -63,7 +64,7 @@ description: Our goal is to be as helpful as possible.
             <div class="form-group mb-0">
 
               <!-- Submit -->
-              <input type="submit" class="btn btn-block btn-primary lift">{{c.button.title}}</input>
+              <input type="submit" class="btn btn-block btn-primary lift" value="{{c.button.title}}"/>
 
             </div>
           </form>

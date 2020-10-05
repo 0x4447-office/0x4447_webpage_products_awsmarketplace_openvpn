@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Get Discount
-headline : Get in touch with our specialists.
+headline : You will get discount!
 
 description: Our goal is to be as helpful as possible.
 ---
@@ -34,8 +34,7 @@ description: Our goal is to be as helpful as possible.
           <hr class="hr-sm my-6 my-md-8 border-gray-300">
 
           <!-- Form -->
-
-          <form action="{{c.thanks}}" method={{c.method}}>
+          <form action="{{c.thanks.url}}" method={{c.method}}>
             <div class="row">
               {%- for i in c.inputs -%}
 
@@ -47,7 +46,7 @@ description: Our goal is to be as helpful as possible.
                 </label>
 
                 <!-- Input -->
-                <input type="{{i.type}}" class="form-control" id="{{i.name}}" name="{{i.name}}" placeholder="{{i.placeholder}}" {{i.required}}>
+                <input type="{{i.type}}" class="form-control" id="{{i.name}}" name="{{i.name}}" placeholder="{{i.placeholder}}" {{i.required}} />
 
               </div>
               {%- endfor -%}
@@ -59,8 +58,7 @@ description: Our goal is to be as helpful as possible.
               </label>
               {%- if c.industry.type == "text" -%}
                 <input name="{{c.industry.name}}" type="text" class="form-control" id="{{c.industry.id}}" name="{{c.industry.id}}"
-                  placeholder="{{c.industry.placeholder}}">
-              </input>
+                  placeholder="{{c.industry.placeholder}}" />
               {%- else -%}
               <select name="{{c.industry.name}}" id="{{c.industry.name}}" class="form-control" >
                 {%- for i in site.data.industries -%}
@@ -81,7 +79,7 @@ description: Our goal is to be as helpful as possible.
             </div>
 
             <div class="form-group mb-5">
-              <input type="checkbox" id="{{c.check.name}}" name="{{c.check.name}}">
+              <input type="checkbox" id="{{c.check.name}}" name="{{c.check.name}}" />
               <label for="{{c.check.name}}">{{c.check.label}}</label>
             </div>
 
@@ -89,7 +87,7 @@ description: Our goal is to be as helpful as possible.
 
               <!-- Submit -->
               <input type="submit" class="btn btn-block btn-primary lift">
-                {{c.button.title}}
+                
               </input>
 
             </div>

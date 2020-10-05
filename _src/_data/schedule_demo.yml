@@ -30,4 +30,6 @@ textarea:
   name: short_description
 button:
   title: Send Request
-thanks : /thankyou
+thanks : 
+  url : /shelude_demo/thankyou
+  text: Thanks, your demo is on the way to your inbox!
