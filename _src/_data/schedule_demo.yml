@@ -2,6 +2,7 @@ image_mobile: assets/img/photos/photo-5.jpg
 image_desktop: assets/img/covers/cover-10.jpg
 image_alt: Our goal is to be as helpful as possible.
 product: Product
+method: 
 inputs:
   - name: firstName
     caption: First Name
@@ -29,4 +30,4 @@ textarea:
   name: short_description
 button:
   title: Send Request
-  link : '/thankyou'
+thanks : /thankyou
