@@ -1,32 +1,42 @@
 product: Product
+method: 
 inputs:
   - name: firstName
     caption: First Name
-    required: true
+    placeholder: Enter your First Name
+    required: required
     type: text
   - name: companyName
     caption: Company Name
+    placeholder: Enter Company Name
     required: false
     type: text
   - name: lastName
     caption: Last Name
-    required: true
+    placeholder: Enter your Last Name
+    required: required
     type: text
   - name: email
     caption: Email
-    required: true
+    placeholder: Enter a valid email address
+    required: required
     type: email
 industry:
   name: industry
+  required: required
   type: text
   caption: Industry
+  placeholder: Enter Industry
 textarea:
   caption: Use Case
+  placeholder: Use Case
   id: use_case
 check:
   label: I agree that I will have email
-  required: true
+  required: required
   name: agree
 button:
   title: Send Request
-  link : '/thankyou'
+thanks : 
+  url : /get_discount/thankyou
+  text: You discount is 10%! 

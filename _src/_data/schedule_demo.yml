@@ -2,26 +2,34 @@ image_mobile: assets/img/photos/photo-5.jpg
 image_desktop: assets/img/covers/cover-10.jpg
 image_alt: Our goal is to be as helpful as possible.
 product: Product
+method: 
 inputs:
   - name: firstName
     caption: First Name
-    required: true
+    placeholder: Enter your First Name
+    required: required
     type: text
   - name: companyName
     caption: Company Name
-    required: false
+    placeholder: Enter Company Name
+    required: required
     type: text
   - name: lastName
     caption: Last Name
-    required: true
+    placeholder: Enter your Last Name
+    required: required
     type: text
   - name: email
     caption: Email
-    required: true
+    placeholder: Enter a valid email address
+    required: required
     type: email
 textarea:
+  placeholder: Enter short company description
   caption: Short company description
   name: short_description
 button:
   title: Send Request
-  link : '/thankyou'
+thanks : 
+  url : /shelude_demo/thankyou
+  text: Thanks, your demo is on the way to your inbox!
