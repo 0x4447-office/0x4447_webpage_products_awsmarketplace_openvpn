@@ -2,7 +2,7 @@ image_mobile: assets/img/photos/photo-5.jpg
 image_desktop: assets/img/covers/cover-10.jpg
 image_alt: Our goal is to be as helpful as possible.
 product: Product
-method: 
+method: get
 inputs:
   - name: firstName
     caption: First Name
@@ -28,6 +28,7 @@ textarea:
   placeholder: Enter short company description
   caption: Short company description
   name: short_description
+  required: required  
 button:
   title: Send Request
 thanks : 

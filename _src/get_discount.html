@@ -34,7 +34,7 @@ description: Our goal is to be as helpful as possible.
           <hr class="hr-sm my-6 my-md-8 border-gray-300">
 
           <!-- Form -->
-          <form action="{{c.thanks.url}}" method={{c.method}}>
+          <form onsubmit='send_message(event)'>
             <div class="row">
               {%- for i in c.inputs -%}
 
@@ -57,7 +57,7 @@ description: Our goal is to be as helpful as possible.
                 {{c.industry.caption}}
               </label>
               {%- if c.industry.type == "text" -%}
-                <input name="{{c.industry.name}}" type="text" class="form-control" id="{{c.industry.id}}" name="{{c.industry.id}}"
+                <input name="{{c.industry.name}}" type="text" class="form-control" id="{{c.industry.name}}" name="{{c.industry.name}}"
                   placeholder="{{c.industry.placeholder}}" />
               {%- else -%}
               <select name="{{c.industry.name}}" id="{{c.industry.name}}" class="form-control" >
@@ -74,7 +74,7 @@ description: Our goal is to be as helpful as possible.
               <label for="contactName">
                 {{c.textarea.caption}}
               </label>
-              <textarea name="{{c.textarea.name}}" class="form-control" id="{{c.textarea.id}}" name="{{c.textarea.id}}"
+              <textarea name="{{c.textarea.name}}" class="form-control" id="{{c.textarea.name}}" name="{{c.textarea.name}}" required minlength="10"
                 placeholder="{{c.textarea.placeholder}}"></textarea>
             </div>
 
@@ -97,9 +97,6 @@ description: Our goal is to be as helpful as possible.
     </div>
   </section>
 
-  <!-- JAVASCRIPT
-    ================================================== -->
-
   <!-- CURVE
           ================================================== -->
   <div class="position-relative">
@@ -113,6 +110,137 @@ description: Our goal is to be as helpful as possible.
   {%- include footer.html
           class="py-8 py-md-11 bg-gray-200" -%}
 
+
   {%- include scripts.html -%}
+
+  <script src="/assets/js/aws-sdk-2.656.0.min.js"></script>
+
+  {%- assign aws = site.data.aws -%}
+
+<script>
+
+      //  1.  Generate the AWS object with the Unuthorized Cognito credentials.
+      //
+
+      AWS.config.update({
+        region: "{{aws.region}}",
+        credentials: new AWS.CognitoIdentityCredentials({
+          IdentityPoolId: "{{aws.id}}"
+        })
+      });
+
+      //
+      //  2.  Initializing s3 object
+      //
+      let s3 = new AWS.S3({
+        apiVersion: "{{aws.api_ver}}"
+      });
+
+      // 
+      //  3.  Function to send the email.
+      //
+      function send_message(event) {
+        //
+        //  1.  Preventign the default HTML form actions, so we can take over
+        //      and bend the form will to our liking.
+        //
+        event.preventDefault();
+
+        let short_description = $('#{{c.textarea.name}}')[0].value;
+        $('#{{c.textarea.name}}').attr("disabled", true);
+
+    {% for i in site.data.schedule_demo.inputs %}
+    let {{i.name}} = $('#{{i.name}}')[0].value;
+    $('#{{ i.name }}').attr('disabled', true);
+    {% endfor %}
+
+      let industry = $('#{{c.industry.name}}')[0].value;
+        $('#{{c.industry.name}}').attr('disabled', true);
+      let use_case = $('#{{c.textarea.name}}')[0].value;
+        $('#{{c.textarea.name}}').attr('disabled', true);
+      let check = $('#{{c.check.name}}')[0].value;
+        $('#{{c.check.name}}').attr('disabled', true);
+      //
+      //  4.  Get the time zone the browser is in.
+      //
+      let tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
+
+      //
+      //  5.  This array is used to format the body of the message.
+      //
+      let body_raw = [
+        short_description,
+        '\n',
+        '- First Name: ' + firstName,
+        '- Last Name: ' + lastName,
+        '- Company Name: ' + companyName,
+        '- Industry: ' + industry,
+        '- Use Case: ' + use_case,
+        '- Agree: ' + check,
+        '- Time zone: ' + tz
+      ];
+      //
+      //  6.  Once we have the body formated how we want we join the array
+      //      in to a single string, which is going to be the body of the message.
+      //  
+      let body = body_raw.join('\n');
+      let fullName = firstName + ' ' + lastName;
+      //
+      //  7.  create a JSON object for S3.
+      //
+      let json = {
+        "subject": "Email from Get_discount page.",
+        "body": body,
+        "emails": {
+          "to": {
+            "name": "{{site.name}}",
+            "email": "{{site.email}}"
+          },
+          "reply_to": {
+            "name": fullName,
+            "email": email
+          }
+        }
+      }
+      //
+      //  8.  Stringify JSON
+      //
+      let data = JSON.stringify(json)
+
+      //
+      //  9.  Convert string to an ArrayBuffer
+      //
+      let encoder = new TextEncoder();
+      let array_buffer = encoder.encode(data)
+
+      //
+      //  10.  Prepare parameters for putObject function
+      //
+      let params = {
+        Body: array_buffer,
+        Bucket: "{{aws.bucket}}",
+        Key: Math.round((new Date()).getTime() / 1000) + ".json"
+      }
+
+      //
+      //  11.  Call putObject to send json to S3 Bucket
+      //
+      s3.putObject(params, function (error, data) {
+
+        //
+        //  1.  CHeck for internal erros.
+        //
+        if (error) {
+          return console.log(error);
+        }
+
+        //
+        //  2.  Send user to thank you page after successful submit.
+        //
+        window.location.replace('/shelude_demo/thankyou/')
+
+      })
+      }
+    </script>
 
 </body>

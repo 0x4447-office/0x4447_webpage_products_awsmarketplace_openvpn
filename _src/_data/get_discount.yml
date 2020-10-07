@@ -30,7 +30,7 @@ industry:
 textarea:
   caption: Use Case
   placeholder: Use Case
-  id: use_case
+  name: use_case
 check:
   label: I agree that I will have email
   required: required
