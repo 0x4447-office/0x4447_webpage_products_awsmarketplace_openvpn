@@ -36,29 +36,20 @@ description: Our goal is to be as helpful as possible.
           <!-- Form -->
 
           <form onsubmit='send_message(event)'>
-            <div class="row">
-              {%- for i in c.inputs -%}
 
-              <div class="form-group col-sm-12 col-md-6 mb-5">
-
-                <!-- Label -->
-                <label for="{{i.name}}">
-                  {{i.caption}}
-                </label>
-
-                <!-- Input -->
-                <input type="{{i.type}}" class="form-control" id="{{i.name}}" name="{{i.name}}" placeholder="{{i.placeholder}}" minlength="3" {{i.required}} />
-
-              </div>
-              {%- endfor -%}
-            </div>
+            {%- include form_inputs.html -%}
 
             <div class="form-group mb-5">
               <label for="{{c.textarea.name}}">
                 {{c.textarea.caption}}
               </label>
               <textarea name="{{c.textarea.name}}" class="form-control" id="{{c.textarea.name}}"
-                placeholder="{{c.textarea.placeholder}}" {{c.textarea.required}} minlength=10></textarea>
+                placeholder="{{c.textarea.placeholder}}" {{c.textarea.required}} minlength=3></textarea>
+            </div>
+
+            <div class="form-group mb-5">
+              <input type="checkbox" id="{{c.check.name}}" name="{{c.check.name}}" />
+              <label for="{{c.check.name}}">{{c.check.label}}</label>
             </div>
 
             <div class="form-group mb-0">
@@ -134,7 +125,8 @@ description: Our goal is to be as helpful as possible.
     $('#{{ i.name }}').attr('disabled', true);
     {% endfor %}
 
-
+        let check = $('#{{c.check.name}}')[0].value;
+        $('#{{c.check.name}}').attr('disabled', true);
     //
     //  4.  Get the time zone the browser is in.
     //
@@ -149,6 +141,7 @@ description: Our goal is to be as helpful as possible.
       '- First Name: ' + firstName,
       '- Last Name: ' + lastName,
       '- Company Name: ' + companyName,
+      '- Agree: ' + check,
       '- Time zone: ' + tz
     ];
     //
@@ -209,7 +202,7 @@ description: Our goal is to be as helpful as possible.
       //
       //  2.  Send user to thank you page after successful submit.
       //
-      window.location.replace('/shelude_demo/thankyou/')
+      window.location.replace('{{c.thanks.url}}')
 
     })
   }
