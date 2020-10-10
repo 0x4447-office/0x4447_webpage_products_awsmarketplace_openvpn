@@ -18,5 +18,5 @@ phases:
       - bundle exec jekyll build
   post_build:
     commands:
-      - aws s3 sync --delete ./build/Banyan s3://$S3_BUCKET_SITE
+      - aws s3 sync --delete ./_site s3://$S3_BUCKET_WEBPAGE
       - aws cloudfront create-invalidation --distribution-id $DISTRIBUTION_ID --paths "/*"
