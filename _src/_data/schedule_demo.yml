@@ -9,28 +9,43 @@ inputs:
     placeholder: Enter your First Name
     required: required
     type: text
-  - name: companyName
-    caption: Company Name
-    placeholder: Enter Company Name
-    required: required
-    type: text
+    order: order-1
+    
   - name: lastName
     caption: Last Name
     placeholder: Enter your Last Name
     required: required
     type: text
+    order: order-3
+
+  - name: companyName
+    caption: Company Name
+    placeholder: Enter Company Name
+    required: required
+    type: text
+    order: order-2
+
   - name: email
     caption: Email
     placeholder: Enter a valid email address
     required: required
     type: email
+    order: order-4
+
 textarea:
   placeholder: Enter short company description
   caption: Short company description
   name: short_description
   required: required  
+
+check:
+  label: I agree that I will have email
+  required: required
+  name: agree
+
 button:
   title: Send Request
+
 thanks : 
   url : /shelude_demo/thankyou
   text: Thanks, your demo is on the way to your inbox!

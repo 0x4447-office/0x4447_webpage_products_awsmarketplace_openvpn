@@ -35,46 +35,14 @@ description: Our goal is to be as helpful as possible.
 
           <!-- Form -->
           <form onsubmit='send_message(event)'>
-            <div class="row">
-              {%- for i in c.inputs -%}
 
-              <div class="form-group col-sm-12 col-md-6 mb-5">
-
-                <!-- Label -->
-                <label for="{{i.name}}">
-                  {{i.caption}}
-                </label>
-
-                <!-- Input -->
-                <input type="{{i.type}}" class="form-control" id="{{i.name}}" name="{{i.name}}" placeholder="{{i.placeholder}}" {{i.required}} />
-
-              </div>
-              {%- endfor -%}
-            </div>
+            {%- include form_inputs.html -%}
 
             <div class="form-group mb-5">
-              <label for="{{c.industry.name}}">
-                {{c.industry.caption}}
-              </label>
-              {%- if c.industry.type == "text" -%}
-                <input name="{{c.industry.name}}" type="text" class="form-control" id="{{c.industry.name}}" name="{{c.industry.name}}"
-                  placeholder="{{c.industry.placeholder}}" />
-              {%- else -%}
-              <select name="{{c.industry.name}}" id="{{c.industry.name}}" class="form-control" >
-                {%- for i in site.data.industries -%}
-                  <option value="{{i.item}}">{{i.item}}</option>
-
-                  {{item.item}}
-                {%- endfor -%}
-              </select>
-              {%- endif -%}
-            </div>
-
-            <div class="form-group mb-5">
-              <label for="contactName">
+              <label for="{{c.textarea.name}}">
                 {{c.textarea.caption}}
               </label>
-              <textarea name="{{c.textarea.name}}" class="form-control" id="{{c.textarea.name}}" name="{{c.textarea.name}}" required minlength="10"
+              <textarea name="{{c.textarea.name}}" class="form-control" id="{{c.textarea.name}}" name="{{c.textarea.name}}" required minlength="3"
                 placeholder="{{c.textarea.placeholder}}"></textarea>
             </div>
 
@@ -148,16 +116,18 @@ description: Our goal is to be as helpful as possible.
 
         let short_description = $('#{{c.textarea.name}}')[0].value;
         $('#{{c.textarea.name}}').attr("disabled", true);
+        
+    {% for i in site.data.get_discount.inputs %}
 
-    {% for i in site.data.schedule_demo.inputs %}
-    let {{i.name}} = $('#{{i.name}}')[0].value;
-    $('#{{ i.name }}').attr('disabled', true);
+      let {{i.name}} = $('#{{i.name}}')[0].value;
+
+      $('#{{ i.name }}').attr('disabled', true);
+
     {% endfor %}
 
-      let industry = $('#{{c.industry.name}}')[0].value;
-        $('#{{c.industry.name}}').attr('disabled', true);
       let use_case = $('#{{c.textarea.name}}')[0].value;
         $('#{{c.textarea.name}}').attr('disabled', true);
+
       let check = $('#{{c.check.name}}')[0].value;
         $('#{{c.check.name}}').attr('disabled', true);
       //
@@ -175,10 +145,12 @@ description: Our goal is to be as helpful as possible.
         '- Last Name: ' + lastName,
         '- Company Name: ' + companyName,
         '- Industry: ' + industry,
+        '- AWS id: ' + aws_id,
         '- Use Case: ' + use_case,
         '- Agree: ' + check,
         '- Time zone: ' + tz
       ];
+      
       //
       //  6.  Once we have the body formated how we want we join the array
       //      in to a single string, which is going to be the body of the message.
@@ -237,7 +209,7 @@ description: Our goal is to be as helpful as possible.
         //
         //  2.  Send user to thank you page after successful submit.
         //
-        window.location.replace('/shelude_demo/thankyou/')
+        window.location.replace('{{c.thanks.url}}')
 
       })
       }
