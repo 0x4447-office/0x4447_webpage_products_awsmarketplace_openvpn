@@ -1,0 +1,92 @@
+image: assets/img/screenshots/desktop/dashkit.jpg
+btn1_name: Subskribe Now
+btn1_link: '#!'
+btn2_name: Learn more
+btn2_link: './#features'
+
+testimonials:
+  - image: img/brands/logotype/airbnb.svg
+    color: '#FF5A5F'
+    text1: >-
+        "A very simple and modern template with a very harmonious color scheme. Also the additional plugins like
+              the statistics are great and fit perfectly into the overall picture."
+    text2: Bernhard
+    text3: Dashkit customer
+
+  - image: img/brands/logotype/coinbase.svg
+    color: '#0081C9'
+    text1: >-
+        “This has been my best theme purchase so far. Simple, beautiful, and I haven't had to make any major
+            changes. It plays well with my changes as well, which is really nice!”
+    text2: Francisco
+    text3: Dashkit customer
+hub:
+  image: assets/img/screenshots/ui/dashkit-layered.png
+  title: >-
+    Use flexible components<br>
+          <span class="text-primary">to build an app quickly.</span>
+  text: >-
+    Dashkit styles and extends Bootstrap components, but also included brand new dashboard focused components.
+stats:
+  - title  : Components
+    values:
+    - val1: 0
+      val2: 100
+      val3: '+'
+
+  - title : Satisfaction
+    values:
+    - val1: 0.00
+      val2: 99.99
+      val3: '%'
+
+  - title  : Review Score
+    values:
+    - val1: 0
+      val2: 5.0
+      val3: /
+    - val1: 0
+      val2: 48
+
+# scalable
+scal:
+  badge: Support
+  title: >-
+    Our friendly support team <br>
+            <span class="text-success">will help you with anything</span>.
+  text: >-
+    We aim to take care of you. Need help with installation, find a bug, or just need a clarifiction about our
+            documentation? We'll be there to lend a helping hand.
+  list:
+    - name: Speedy
+    - name: Global team
+    - name: 5-star reviews
+    - name: Good looking
+  images:
+    - image: assets/img/photos/photo-10.jpg
+    - image: assets/img/photos/photo-12.jpg
+    - image: assets/img/photos/photo-9.jpg
+    - image: assets/img/photos/photo-11.jpg
+
+# scalable
+cust:
+  image1: assets/img/screenshots/desktop/dashkit-alt-dark.jpg
+  image2: assets/img/devices/macbook.svg
+  badge: Customize
+  title: >-
+    Customize your product. <br>
+          <span class="text-primary">There's even night mode</span>.
+  text: >-
+    Through the use of variables and a few config options you can completely change the look and feel of
+          Dashkit. There's even an option to use an inverted color scheme.
+    
+cta:
+  bg_image: assets/img/patterns/pattern-1.svg
+  badge: GET A DEMO
+  title: Get Dashkit and save your time.
+  text : >-
+    Stop wasting time trying to do it the "right way" and build your app from scratch. Dashkit is faster, easier, and you still have complete control.
+  button_link: >-
+    /schedule_demo
+  button_text: Schedule a Demo
+  demo: /demo

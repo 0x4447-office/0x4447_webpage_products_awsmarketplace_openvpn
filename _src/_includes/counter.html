@@ -1,0 +1,39 @@
+<div class="col-12 col-md-6 col-lg-5 offset-lg-1 py-8 py-md-11 py-lg-12">
+
+  <!-- Heading -->
+  <h2>
+    {{a.title}}
+  </h2>
+
+  <!-- Text -->
+  <p class="font-size-lg text-gray-700 mb-6">
+    {{a.text}}
+  </p>
+  <!-- Stats -->
+  {%- assign i = 0 -%}
+  <div class="row">
+    {%- for s in a.stats -%}
+    {%- if i==0 -%}
+    {%- assign c = "pl-3 pr-3" -%} 
+    {%- elsif i==1 -%}
+    {%- assign c = "pl-3 pr-3 border-left border-gray-300" -%} 
+    {%- else -%}
+    {%- assign c = "pl-3 pr-3 border-left border-gray-300" -%} 
+    {%- endif -%}
+    <div class="{{c}}">
+      <h3 class="mb-0">
+        {%- for v in s.values -%}
+        <span data-toconditionggle="countup" data-from="{{v.val1}}" data-to="{{v.val2}}" data-aos
+          data-aos-id="countup:in">0</span>{{v.val3}}
+        {%- endfor -%}
+      </h3>
+      <p class="text-gray-700 mb-0" style="word-break: break-all;">
+        {{s.title}}
+      </p>
+    </div>
+    {%- assign i = i | plus: 1 -%}
+    {%- endfor -%}
+
+  </div>
+
+</div>

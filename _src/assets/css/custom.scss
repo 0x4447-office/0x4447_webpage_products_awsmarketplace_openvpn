@@ -1,0 +1,66 @@
+---
+---
+
+.table-fix {
+  overflow-y: auto;
+}
+
+.table-fix table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.table-fix th {
+  position: sticky;
+  top: 0;
+  background: #eee;
+}
+/* .form-control:required:valid {
+  border: 2px solid lightgreen;
+}
+.form-control:focus:invalid {
+  border: 2px solid darkred;
+}
+ */
+@media (max-width: 767px) {
+  .pricing-table {
+    .card-body {
+      padding: 0;
+    }
+  }
+}
+@media (min-width: 768px) {
+  .customize {
+    padding-bottom: 250px;
+  }
+}
+.opacity-0 {
+  opacity:0!important;
+}
+.opacity-1 {
+  opacity:0.1!important;
+}
+.opacity-2 {
+  opacity:0.2!important;
+}
+.opacity-3 {
+  opacity:0.3!important;
+}
+.opacity-4 {
+  opacity:.4!important;
+}
+.opacity-5 {
+  opacity:0.5!important;
+}
+.opacity-6 {
+  opacity:0.6!important;
+}
+.opacity-7 {
+  opacity:0.7!important;
+}
+.opacity-8 {
+  opacity:0.8!important;
+}
+.opacity-9 {
+  opacity:0.9!important;
+}

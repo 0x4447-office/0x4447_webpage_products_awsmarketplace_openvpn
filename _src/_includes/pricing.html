@@ -1,0 +1,59 @@
+<section class="pt-9 pb-10 py-md-11 bg-white" id="Price">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-10 col-lg-8 text-center">
+        {%- assign p = site.data.pricing -%}
+        <!-- Badge -->
+        <span class="badge badge-pill badge-success-soft mb-3">
+          <span class="h6 text-uppercase">
+            {{p.badge}}
+          </span>
+        </span>
+
+        <!-- Heading -->
+        <h2>
+          {{p.title}}
+        </h2>
+
+        <!-- Text -->
+        <p class="lead text-gray-700">
+          {{p.text}}
+        </p>
+
+      </div>
+    </div> <!-- / .row -->
+
+    <!-- Picing table -->
+    <div class="card pricing-table">
+      <div class="card-body">
+        {{site.data.pricing_back.table.[0][0]]}}
+        <div class="table-responsive  table-fix" style="height: {{p.table_height}};">
+          <table class="table table-striped">
+            <thead>
+              <!-- rows  -->
+              {%- assign s = p.table | size | minus: 1 -%}
+              <!-- cols -->
+              {%- assign c = p.table[0].size | minus: 1 -%}
+              <tr>
+                {%- for i in (0..c) -%}
+                <th scope="col">{{p.table[0].[i]}}</th>
+                {%- endfor -%}
+              </tr>
+            </thead>
+            <tbody>
+              {%- for n in (1..s) -%}
+              <tr>
+                {%- for i in (0..c) -%}
+                <td scope="row">{{p.table[n].[i]}}</td>
+                {%- endfor -%}
+              </tr>
+              {%- endfor -%}
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </div>
+
+  </div> <!-- / .container -->
+</section>

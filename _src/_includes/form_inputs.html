@@ -1,0 +1,26 @@
+<div class="row">
+  {%- for i in c.inputs -%}
+
+  <div class="form-group col-sm-12 col-md-6 mb-5 {{i.order}}">
+
+    <!-- Label -->
+    <label for="{{i.name}}">
+      {{i.caption}}
+    </label>
+
+    <!-- Input -->
+    <input type="{{i.type}}" {%- if i.type == email -%}
+      pattern="/^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA -Z0-9 -] {0,61} [a-zA-Z0-9])? (?: \. [A-zA-Z0-9] (?: [A-zA-Z0-9 -] { 0,61} [a-zA-Z0-9])?) * $ /"
+      {%- endif -%} 
+      {%- if i.name == "aws_id" -%}
+        pattern="^\d{12}$"
+        minlength="12"
+      {%- else -%}
+        minlength="3"
+      {%- endif -%}
+      class="form-control" id="{{i.name}}" name="{{i.name}}" placeholder="{{i.placeholder}}" 
+      {{i.required}} />
+
+  </div>
+  {%- endfor -%}
+</div>

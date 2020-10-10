@@ -1,0 +1,29 @@
+<section class="py-10 py-md-14 bg-dark" id="demo" style="background-image: url(assets/img/patterns/pattern-1.svg);">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-10 col-lg-8 text-center">
+        {%- assign c = site.data.desktop.cta -%}
+        <!-- Badge -->
+        <span class="badge badge-pill badge-gray-700-soft mb-3"><a href="{{c.demo}}">
+          <span class="h6 text-uppercase">{{c.badge}}</span></a>
+        </span>
+
+        <!-- Heading -->
+        <h2 class="display-4 text-white">
+          {{c.title}}
+        </h2>
+
+        <!-- Text -->
+        <p class="font-size-lg text-muted mb-6 mb-md-8">
+          {{c.text}}
+        </p>
+
+        <!-- Button -->
+        <a href="{{c.button_link}}" class="btn btn-primary-desat lift">
+          {{c.button_text}} <i class="fe fe-arrow-right ml-2"></i>
+        </a>
+
+      </div>
+    </div> <!-- / .row -->
+  </div> <!-- / .container -->
+</section>

@@ -1,0 +1,35 @@
+brand : assets/img/brand.svg
+text  : A better way to build.
+social:
+  - title: facebook
+    link : "#!"
+    image: /assets/img/icons/social/facebook.svg
+  - title: twitter
+    link : "#!"
+    image: /assets/img/icons/social/twitter.svg
+  - title: linkedin
+    link : "#!"
+    image: /assets/img/icons/social/linkedin.svg
+  - title: youtube
+    link : "#!"
+    image: /assets/img/icons/social/youtube.svg
+
+products_title: Products
+products:
+  - title: OpenVPN Server
+    link : "#!"
+
+  - title: Samba Server
+    link : "#!"
+
+  - title: Rsyslog Server
+    link : "#!"
+
+legal_title: Legal
+legal:
+  - title: Privacy Policy
+    link : "https://legal.0x4447.com/PAGE.0x4447.com/privacy_policy.pdf"
+
+  - title: Terms of Services
+    link : "https://legal.0x4447.com/PAGE.0x4447.com/terms_of_service.pdf"
+

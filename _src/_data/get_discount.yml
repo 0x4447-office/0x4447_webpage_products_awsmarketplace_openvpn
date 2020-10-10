@@ -1,0 +1,60 @@
+product: Product
+inputs:
+  - name: firstName
+    caption: First Name
+    placeholder: Enter your First Name
+    required: required
+    type: text
+    order: order-1
+
+  - name: lastName
+    caption: Last Name
+    placeholder: Enter your Last Name
+    required: required
+    type: text
+    order: order-3
+
+  - name: companyName
+    caption: Company Name
+    placeholder: Enter Company Name
+    required: false
+    type: text
+    order: order-2
+
+  - name: email
+    caption: Email
+    placeholder: Enter a valid email address
+    required: required
+    type: email
+    order: order-4
+
+  - name: industry
+    caption: Industry
+    placeholder: Enter an Industry
+    required: required
+    type: text
+    order: order-5
+
+  - name: aws_id
+    caption: AWS account id
+    placeholder: Enter your AWS account id
+    required: required
+    type: text
+    order: order-6
+
+textarea:
+  caption: Use Case
+  placeholder: Use Case
+  name: use_case
+
+check:
+  label: I agree that I will have email
+  required: required
+  name: agree
+
+button:
+  title: Send Request
+
+thanks : 
+  url : /get_discount/thankyou
+  text: You discount is 10%! 

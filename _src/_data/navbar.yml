@@ -1,0 +1,15 @@
+brand     : assets/img/brand.svg
+navigation:
+  - title: Home
+    link: './'
+  - title: Features
+    link: './#features'
+  - title: Price
+    link: './#Price'
+  - title: Demo
+    link: '#demo'
+  - title: Support
+    link: './#Support'
+  - title: Documentation
+    link: 'https://documentation.0x4447.com/'
+

@@ -1,0 +1,14 @@
+title: >-
+  Our pricing is incredibly <span class="text-success">simple and flexible.</span>
+text: >-
+  Companies of all sizes need access to Dashkit, so we have a flexible pricing system for any size of project or company.
+badge: Pricing
+table: [
+  [EC2 INSTANCE, ANNUALLY, MONTHLY, DAILY, HOURLY], # header
+  [INSTANCE 1,   21,       22,      23,    24],     # row1
+  [INSTANCE 2,   31,       32,      33,    34],
+  [INSTANCE 3,   41,       42,      43,    44],
+  [INSTANCE 4,   51,       52,      53,    54],     # row4
+  [INSTANCE 4,   61,       62,      63,    64],     # row5
+]
+table_height: 400px

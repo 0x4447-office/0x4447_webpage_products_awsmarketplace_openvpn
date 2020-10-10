@@ -1,0 +1,46 @@
+<nav class="navbar navbar-expand-lg navbar-light">
+  <div class="container">
+
+    <!-- Brand -->
+    <a class="navbar-brand" href="{{relative_url}}/index.html">
+      <img src="{{site.url}}/{{site.data.navbar.brand}}" class="navbar-brand-img" alt="logo">
+    </a>
+
+    <!-- Toggler -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+      aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Collapse -->
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+
+      <!-- Toggler -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fe fe-x"></i>
+      </button>
+
+      {%- assign nav = site.data.navbar.navigation -%}
+      <!-- Navigation -->
+      <ul class="navbar-nav ml-auto">
+        {%- for i in nav -%}
+        <li class="nav-item">
+          <a class="nav-link" href="{{i.link}}">{{i.title}}
+          </a>
+        </li>
+        {%- endfor -%}
+      </ul>
+
+      <!-- Button -->
+      {%- assign btn = site.data.navbar.navigation.button -%}
+      {%- if btn -%}
+      <a class="navbar-btn btn btn-sm btn-primary lift ml-auto" href="{{btn.link}}" target="_blank">
+        {{btn.name}}
+      </a>
+      {%- endif -%}
+
+    </div>
+
+  </div>
+</nav>
