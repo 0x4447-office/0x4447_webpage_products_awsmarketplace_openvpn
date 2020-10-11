@@ -1,7 +1,7 @@
 title   : 
 subtitle: 
 name    : David Gatti
-email   : 3429638@gmail.com #david@0x4447.com
+email   : david@0x4447.com
 description: >- # this means to ignore newlines until "baseurl:"
 source: ./_src
 baseurl: "" # the subpath of your site, e.g. /blog
