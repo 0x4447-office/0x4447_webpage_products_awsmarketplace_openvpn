@@ -33,9 +33,12 @@
         <ul class="list-unstyled text-muted mb-6 mb-md-8 mb-lg-0">
           {%- for item in site.data.navbar.navigation -%}
           <li class="mb-3">
-            <a href="{{item.link}}" class="text-reset">
-              {{item.title}}
+          {%- if i.link contains "http" -%}
+          <a class="text-reset" href="{{item.link}}">{{i.title}}
+            {%- else -%}
+            <a class="text-reset" href="{{site.url}}/{{item.link}}">{{item.title}}
             </a>
+            {%- endif -%}
           </li>
           {%- endfor -%}
         </ul>
