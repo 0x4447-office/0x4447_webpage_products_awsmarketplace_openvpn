@@ -12,7 +12,7 @@ url: "" # https://example.com/
 #  - jekyll-seo-tag
 #  - jekyll-feed
 excerpt_separator: <!--more-->
-
+permalink: pretty
 #collections:
 #  services:
 #    output: true
