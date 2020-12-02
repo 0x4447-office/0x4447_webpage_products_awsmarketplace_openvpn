@@ -4,7 +4,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
  
     <meta name="generator" content="{{site.generator}}" />
-    <title>{{page.title}} | {{site.title}}</title>
+    
+    {%- if page.isHome -%}
+        <title>{{site.product.title }} - {{ site.product.tagline }}</title>
+    {%- else -%}
+        <title>{{ page.title }} - {{ site.product.title }}</title>
+    {%- endif -%}
     {%- if page.author -%}
     {%- assign author = page.author -%}
     {%- else -%}
@@ -23,7 +28,7 @@
     {%- assign descr = site.description -%}
     {%- endif -%}
     <meta name="description" content="{{descr}}" />
-    <link rel="canonical" href="{{page.url | absolute_url}}" />
+    <link rel="canonical" href="{{ site.url | append: page.url }}" />
     {%- if page.published_time -%}
     <meta property="article:published_time" content="{{page.published_time}}" />
     {%- endif -%}
@@ -42,7 +47,6 @@
     {%- endif -%}
     
     <meta name="twitter:creator" content="{{author}}">
-    <meta http-equiv="content-language" content="en" />
     <meta name="twitter:title" content="{{page.title}} | {{site.title}}">
     {%- if page.description -%}
     <meta name="twitter:description" content="{{page.description}}">
@@ -86,21 +90,13 @@
         "name":"{{site.title}}","headline":"{{page.title}}","@context":"https://schema.org"}</script>
 
   <!-- Libs CSS -->
-  <link rel="stylesheet" href="{{site.url}}/assets/fonts/Feather/feather.css">
-  <link rel="stylesheet" href="{{site.url}}/assets/libs/@fancyapps/fancybox/dist/jquery.fancybox.min.css">
-  <link rel="stylesheet" href="{{site.url}}/assets/libs/aos/dist/aos.css">
-  <link rel="stylesheet" href="{{site.url}}/assets/libs/choices.js/public/assets/styles/choices.min.css">
-  <link rel="stylesheet" href="{{site.url}}/assets/libs/flickity-fade/flickity-fade.css">
-  <link rel="stylesheet" href="{{site.url}}/assets/libs/flickity/dist/flickity.min.css">
-  <link rel="stylesheet" href="{{site.url}}/assets/libs/highlightjs/styles/vs2015.css">
-  <link rel="stylesheet" href="{{site.url}}/assets/libs/jarallax/dist/jarallax.css">
-  <link rel="stylesheet" href="{{site.url}}/assets/libs/quill/dist/quill.core.css" />
-
-  <!-- Map -->
-  <link href='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+  <link rel="stylesheet" href="/assets/fonts/Feather/feather.css">
+  <link rel="stylesheet" href="/assets/libs/aos/dist/aos.css">
+  <link rel="stylesheet" href="/assets/libs/flickity-fade/flickity-fade.css">
+  <link rel="stylesheet" href="/assets/libs/flickity/dist/flickity.min.css">
 
   <!-- Theme CSS -->
-  <link rel="stylesheet" href="{{site.url}}/assets/css/theme.min.css">
-  <link rel="stylesheet" href="{{site.url}}/assets/css/custom.css">
+  <link rel="stylesheet" href="/assets/css/theme.min.css">
+  <link rel="stylesheet" href="/assets/css/custom.css">
 
 </head>

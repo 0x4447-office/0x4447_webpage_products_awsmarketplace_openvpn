@@ -1,20 +1,24 @@
-<section class="py-6 py-md-8 bg-primary-desat">
-  <div class="container">
-    <div class="flickity-viewport-visible"
-      data-flickity='{"imagesLoaded": true, "initialIndex": 6, "pageDots": false, "prevNextButtons": false, "contain": true}'>
-      {%- for item in site.data.brands -%}
-      <div class="col-4 col-md-3 col-lg-2">
+{% if site.data.brands.size > 0 %}
+  <section class="py-6 py-md-8 bg-primary-desat">
+    <div class="container">
+      <div class="flickity-viewport-visible"
+        data-flickity='{"imagesLoaded": true, "initialIndex": 6, "pageDots": false, "prevNextButtons": false, "contain": true}'>
+        {%- for item in site.data.brands -%}
+        <div class="col-4 col-md-3 col-lg-2">
 
-        <!-- Brand -->
-        <div class="img-fluid svg-shim text-white">
-          {%- include {{item.link}} -%}
+          <!-- Brand -->
+              <img
+                src="{{ item.url }}"
+                alt="{{ item.alt }}"
+                title="{{ item.title }}"
+                class="shame__brand-image"
+              />
         </div>
+        {%- endfor -%}
+
 
       </div>
-      {%- endfor -%}
-
-
     </div>
-  </div>
-  </div> <!-- / .container -->
-</section>
+    </div> <!-- / .container -->
+  </section>
+{% endif %}

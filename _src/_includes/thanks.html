@@ -1,18 +1,8 @@
-<section>
-  {%- assign th = include.thanks.text -%}
-  <!-- Content -->
-  <div class="container d-flex flex-column">
-    <div class="row align-items-center justify-content-between no-gutters min-vh-100">
-      
-      <div class="col-12 p-8">
-        <!-- Heading -->
-        <h1 class="font-weight-bold text-center mb-2">
-          {{page.title}}
-        </h1>
-        <h2 class="text-center">{{th}}</h2>
+{%- assign th = include.thanks.text -%}
 
-      </div>
-
-    </div> <!-- / .row -->
+<section class="bg-white py-8 py-md-11">  
+  <div class="container text-center">
+    <h1>{{page.title}}</h1>
+    <p>{{th}}</p>
   </div>
 </section>

@@ -1,46 +1,44 @@
 image: assets/img/screenshots/desktop/dashkit.jpg
-btn1_name: Subskribe Now
+btn1_name: Subscribe Now
 btn1_link: '#!'
 btn2_name: Learn more
 btn2_link: './#features'
 
 testimonials:
-  - image: img/brands/logotype/airbnb.svg
+  - image:
     color: '#FF5A5F'
     text1: >-
-        "A very simple and modern template with a very harmonious color scheme. Also the additional plugins like
-              the statistics are great and fit perfectly into the overall picture."
-    text2: Bernhard
-    text3: Dashkit customer
+        “First of all it boots up very quick. It is mentioned up to 12 minutes, but I was able to boot it up with Free tier subscription (t2.micro free usage option) within 5 minutes. The CA and the mind-aching stuff is done within that minutes and all you have to do is to run the script mentoned in documentation and the deal is done.”
+    text2: AWS Marketplace
+    text3: Aren Harutyunyan
 
-  - image: img/brands/logotype/coinbase.svg
+  - image:
     color: '#0081C9'
     text1: >-
-        “This has been my best theme purchase so far. Simple, beautiful, and I haven't had to make any major
-            changes. It plays well with my changes as well, which is really nice!”
-    text2: Francisco
-    text3: Dashkit customer
+        “Gone are the days when it would take hours to set up an OpenVPN server and get client connections up and running. This awesome system from 0x4447 LLC just took me 10 minutes to get up and running. I could create client configurations in a jiffy and what's more? I was able to scale-down or scale-up my instance without worrying about losing my connections!”
+    text2: AWS Marketplace
+    text3: Noel T
 hub:
   image: assets/img/screenshots/ui/dashkit-layered.png
   title: >-
-    Use flexible components<br>
-          <span class="text-primary">to build an app quickly.</span>
+    No limits on connected users<br>
+          <span class="text-primary">and active connections.</span>
   text: >-
-    Dashkit styles and extends Bootstrap components, but also included brand new dashboard focused components.
+    The limits depend on the instance type that you select, rather than on arbitrary soft limits that you'll see with much of the competition.
 stats:
-  - title  : Components
+  - title  : Accounts
     values:
-    - val1: 0
-      val2: 100
-      val3: '+'
+    - val1: '∞'
+      val2: '∞'
+      val3: '∞'
 
-  - title : Satisfaction
+  - title : Connection
     values:
     - val1: 0.00
       val2: 99.99
       val3: '%'
 
-  - title  : Review Score
+  - title  : Persistent Profiles
     values:
     - val1: 0
       val2: 5.0
@@ -74,11 +72,11 @@ cust:
   image2: assets/img/devices/macbook.svg
   badge: Customize
   title: >-
-    Customize your product. <br>
-          <span class="text-primary">There's even night mode</span>.
+    The limiting factor is<br>
+          <span class="text-primary">the server performance</span>.
   text: >-
-    Through the use of variables and a few config options you can completely change the look and feel of
-          Dashkit. There's even an option to use an inverted color scheme.
+    If your user starts to complain about a slow connection, or if you see the CPU time is above 75 percent,
+          then just change the server to a bigger instance type to accommodate the new traffic and users.
     
 cta:
   bg_image: assets/img/patterns/pattern-1.svg
@@ -87,6 +85,6 @@ cta:
   text : >-
     Stop wasting time trying to do it the "right way" and build your app from scratch. Dashkit is faster, easier, and you still have complete control.
   button_link: >-
-    /schedule_demo
+    /schedule_demo.html
   button_text: Schedule a Demo
   demo: /demo

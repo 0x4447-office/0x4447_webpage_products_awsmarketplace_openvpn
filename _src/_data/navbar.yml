@@ -6,10 +6,9 @@ navigation:
     link: './#features'
   - title: Price
     link: './#Price'
-  - title: Demo
-    link: '#demo'
   - title: Support
     link: './#Support'
+  - title: Demo
+    link: '#demo'
   - title: Documentation
     link: 'https://documentation.0x4447.com/'
-

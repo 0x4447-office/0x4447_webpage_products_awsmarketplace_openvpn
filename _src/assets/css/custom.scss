@@ -15,10 +15,6 @@
   top: 0;
   background: #eee;
 }
-.error {
-  min-height: 50vh;
-  padding-top: 100px;
-}
 /* .form-control:required:valid {
   border: 2px solid lightgreen;
 }
@@ -67,4 +63,8 @@
 }
 .opacity-9 {
   opacity:0.9!important;
+}
+
+.shame__brand-image {
+  max-height: 3em;
 }

@@ -1,8 +1,8 @@
 ---
 layout: default
 title: Get Discount
+permalink: /get-discount.html
 headline : You will get discount!
-
 description: Our goal is to be as helpful as possible.
 ---
 
@@ -14,7 +14,7 @@ description: Our goal is to be as helpful as possible.
   <!-- CONTENT
     ================================================== -->
   <section>
-    {%- assign c = site.data.get_discount -%}
+    {%- assign c = site.data.get-discount -%}
     <!-- Content -->
     <div class="container d-flex flex-column">
       <div class="row align-items-center justify-content-between no-gutters min-vh-100">
@@ -47,7 +47,7 @@ description: Our goal is to be as helpful as possible.
             </div>
 
             <div class="form-group mb-5">
-              <input type="checkbox" id="{{c.check.name}}" name="{{c.check.name}}" />
+              <input required type="checkbox" id="{{c.check.name}}" name="{{c.check.name}}"{%- if c.check.checked == true -%} checked{%- endif -%} />
               <label for="{{c.check.name}}">{{c.check.label}}</label>
             </div>
 
@@ -117,7 +117,7 @@ description: Our goal is to be as helpful as possible.
         let short_description = $('#{{c.textarea.name}}')[0].value;
         $('#{{c.textarea.name}}').attr("disabled", true);
         
-    {% for i in site.data.get_discount.inputs %}
+    {% for i in site.data.get-discount.inputs %}
 
       let {{i.name}} = $('#{{i.name}}')[0].value;
 
@@ -161,7 +161,7 @@ description: Our goal is to be as helpful as possible.
       //  7.  create a JSON object for S3.
       //
       let json = {
-        "subject": "Email from Get_discount page.",
+        "subject": "Email from get-discount page.",
         "body": body,
         "emails": {
           "to": {

@@ -1,11 +1,12 @@
 ---
 layout: default
-title: Beautiful analytics
+isHome: true
+title: OpenVPN Server - Unlimited Connected Devices
 headline : >- 
-  Beautiful analytics <br><span class="text-primary">built with Dashkit</span>.
-
+  OpenVPN Server <br><span class="text-primary">Unlimited Connected Devices</span>.
+permalink: /index.html
 description: >- 
-  Intelligent developers use our Dashkit theme to build their internal tools and client admin applications. Save yourself time and money.
+  Our product does not have limits on how many accounts or active connections you can have. The limits depend on the instance type that you select.
 ---
 
 <body class="bg-light">
@@ -52,15 +53,9 @@ description: >-
     </div>
   </div>
 
-  <!-- SUPPORT
+  <!-- PRICING
     ================================================== -->
-
-  {%- include support.html 
-      title = d.scal.title
-      text  = d.scal.text
-      list  = d.scal.list
-      badge = d.scal.badge
-      images= d.scal.images -%}
+  {%- include pricing.html -%}
 
   <!-- CURVE
             ================================================== -->
@@ -70,9 +65,15 @@ description: >-
     </div>
   </div>
 
-  <!-- PRICING
+  <!-- SUPPORT
     ================================================== -->
-{%- include pricing.html -%}
+
+  {%- include support.html 
+    title = d.scal.title
+    text  = d.scal.text
+    list  = d.scal.list
+    badge = d.scal.badge
+    images= d.scal.images -%}
 
   <!-- BRANDS
     ================================================== -->

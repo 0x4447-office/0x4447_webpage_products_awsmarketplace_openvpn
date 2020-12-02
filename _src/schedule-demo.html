@@ -2,7 +2,7 @@
 layout: default
 title: Schedule a Demo
 headline : Get in touch with our specialists.
-
+permalink: /schedule_demo.html
 description: Our goal is to be as helpful as possible.
 ---
 
@@ -14,7 +14,7 @@ description: Our goal is to be as helpful as possible.
   <!-- CONTENT
     ================================================== -->
   <section>
-    {%- assign c = site.data.schedule_demo -%}
+    {%- assign c = site.data.schedule-demo -%}
     <!-- Content -->
     <div class="container d-flex flex-column">
       <div class="row align-items-center justify-content-between no-gutters min-vh-100">
@@ -48,7 +48,7 @@ description: Our goal is to be as helpful as possible.
             </div>
 
             <div class="form-group mb-5">
-              <input type="checkbox" id="{{c.check.name}}" name="{{c.check.name}}" />
+              <input required type="checkbox" id="{{c.check.name}}" name="{{c.check.name}}"{%- if c.check.checked == true -%} checked{%- endif -%} />
               <label for="{{c.check.name}}">{{c.check.label}}</label>
             </div>
 
@@ -120,7 +120,7 @@ description: Our goal is to be as helpful as possible.
     let short_description = $('#{{c.textarea.name}}')[0].value;
     $('#{{c.textarea.name}}').attr("disabled", true);
 
-    {% for i in site.data.schedule_demo.inputs %}
+    {% for i in site.data.schedule-demo.inputs %}
     let {{i.name}} = $('#{{i.name}}')[0].value;
     $('#{{ i.name }}').attr('disabled', true);
     {% endfor %}
@@ -154,7 +154,7 @@ description: Our goal is to be as helpful as possible.
     //  7.  create a JSON object for S3.
     //
     let json = {
-      "subject": "Email from schedule_demo page.",
+      "subject": "Email from schedule-demo page.",
       "body": body,
       "emails": {
         "to": {

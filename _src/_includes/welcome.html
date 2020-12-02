@@ -1,4 +1,4 @@
-<section class="position-relative py-8 py-md-11 mb-9">
+<section class="position-relative py-8 py-md-11 mb-10">
 
   <!-- Shape -->
   <div class="shape shape-fluid-x shape-blur-1 svg-shim text-gray-200">
@@ -12,7 +12,7 @@
 
         <!-- Image -->
         <div class="img-skewed img-skewed-left mb-8 mb-md-0">
-          <img src="assets/img/screenshots/desktop/dashkit.jpg" alt="..." class="screenshot img-fluid mw-md-130"
+          <img src="data:image/png;base64,{%- include {{ site.data.desktop.image | append: '.base64' }} -%}" alt="..." class="screenshot img-fluid mw-md-130"
             data-aos="img-skewed-item-left" data-aos-delay="100">
         </div>
 
@@ -30,10 +30,10 @@
         </p>
         {%- assign w = site.data.desktop -%}
         <!-- Buttons -->
-        <a href="{{w.btn1_link}}" class="btn btn-primary mr-1 lift">
-          {{w.btn1_name}} <i class="fe fe-arrow-right ml-3"></i>
+        <a href="{{w.btn1_link}}" class="btn btn-primary lift">
+          {{w.btn1_name}}
         </a>
-
+        &nbsp;or&nbsp;
         <a href="{{w.btn2_link}}" class="btn btn-primary-soft lift">
           {{w.btn2_name}}
         </a>

@@ -8,10 +8,6 @@
         <!-- Blockquote -->
         <blockquote class="blockquote mb-8 mb-md-0">
           {%- assign img = b.image -%}
-          <!-- Logo -->
-          <div class="img-fluid mb-5 mb-md-6 svg-shim" style="max-width: 120px; color: {{b.color}};">
-            {% include {{img}} %}
-          </div>
           <!-- Text -->
           <p class="lead text-gray-700 mb-5 mb-md-7">
             {{b.text1}}
@@ -23,6 +19,7 @@
           <p class="font-size-sm text-muted mb-0">
             {{b.text3}}
           </p>
+        </blockquote>
       </div>
       {%- assign k = i | modulo: 2 -%}
       {%- if k == 0 -%}

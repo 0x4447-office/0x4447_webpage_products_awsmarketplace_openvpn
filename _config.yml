@@ -1,23 +1,19 @@
-title   : 
-subtitle: 
+title: "0x4447"
 name    : David Gatti
 email   : david@0x4447.com
 description: >- # this means to ignore newlines until "baseurl:"
+product:
+  title: "OpenVPN Access Server"
+  tagline: "Unlimited Connected Devices"
 source: ./_src
-baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # https://example.com/
-#livereload: true
-# Build settings
-#plugins:
-#  - jekyll-seo-tag
-#  - jekyll-feed
-excerpt_separator: <!--more-->
+google_analytics: UA-TODO
 permalink: pretty
-#collections:
-#  services:
-#    output: true
-#  pages:
-#    output: true
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - _archive/
 
 defaults:
   -
@@ -30,26 +26,3 @@ defaults:
       path: 'assets/js/**'
     values:
       sitemap: false
-
-#  - scope:
-#      path: ""
-#      type: "services"
-#    values:
-#      layout: "service"
-#  - scope:
-#      path: ""
-#      type: "posts"
-#    values:
-#      layout: "post"
-
-exclude:
-  - .sass-cache/
-  - .jekyll-cache/
-  - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/

@@ -3,7 +3,7 @@
 
     <!-- Brand -->
     <a class="navbar-brand" href="{{relative_url}}/index.html">
-      <img src="{{site.url}}/{{site.data.navbar.brand}}" class="navbar-brand-img" alt="logo">
+      <img src="/assets/img/logo_light.svg" class="navbar-brand-img" alt="0x4447, LLC." style="width: 200px;">
     </a>
 
     <!-- Toggler -->
@@ -27,9 +27,9 @@
         {%- for i in nav -%}
         <li class="nav-item">
           {%- if i.link contains "http" -%}
-            <a class="nav-link" href="{{i.link}}">{{i.title}}
+            <a class="nav-link" href="{{i.link}}">{{i.title}}</a>
               {%- else -%}
-              <a class="nav-link" href="{{site.url}}/{{i.link}}">{{i.title}}
+              <a class="nav-link" href="/{{i.link}}">{{i.title}}
               </a>
               {%- endif -%}
         </li>

@@ -16,14 +16,14 @@ inputs:
     placeholder: Enter your Last Name
     required: required
     type: text
-    order: order-3
+    order: order-2
 
   - name: companyName
     caption: Company Name
     placeholder: Enter Company Name
     required: required
     type: text
-    order: order-2
+    order: order-3
 
   - name: email
     caption: Email
@@ -39,13 +39,14 @@ textarea:
   required: required  
 
 check:
-  label: I agree that I will have email
+  label: I agree to receive emails
   required: required
   name: agree
+  checked: false
 
 button:
   title: Send Request
 
 thanks : 
-  url : /schedule_demo/thankyou
+  url : /schedule_demo/thankyou.html
   text: Thanks, your demo is on the way to your inbox!

@@ -1,2 +1,7 @@
-# 0x4447_template_office_jekyll
-This template deploys a Jekyll setup
+# README
+
+## How to run locally
+
+- `bundle install`
+- `gem install jekyll bundler`
+- `bundle exec jekyll serve`

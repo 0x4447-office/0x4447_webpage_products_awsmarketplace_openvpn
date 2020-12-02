@@ -1,4 +1,4 @@
-<section class="pt-9 pb-10 py-md-11 bg-white" id="Price">
+<section class="pt-10 pt-lg-9 pb-md-14 pb-lg-15" id="Price">
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-12 col-md-10 col-lg-8 text-center">
@@ -24,7 +24,7 @@
     </div> <!-- / .row -->
 
     <!-- Picing table -->
-    <div class="card pricing-table">
+    <div class="card pricing-table bg-light">
       <div class="card-body">
         {{site.data.pricing_back.table.[0][0]]}}
         <div class="table-responsive  table-fix" style="height: {{p.table_height}};">
@@ -44,7 +44,7 @@
               {%- for n in (1..s) -%}
               <tr>
                 {%- for i in (0..c) -%}
-                <td scope="row">{{p.table[n].[i]}}</td>
+                <td>{{p.table[n].[i]}}</td>
                 {%- endfor -%}
               </tr>
               {%- endfor -%}
